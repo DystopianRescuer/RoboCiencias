@@ -10,5 +10,8 @@ void setup() {
 }
 
 void loop() {
-  
+  pataDerecha.write(90);
+  delay(300);
+  pataDerecha.write(0);
+  delay(300);
 }
