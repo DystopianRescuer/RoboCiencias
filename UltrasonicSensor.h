@@ -13,19 +13,15 @@
  * */
 class UltraSonicSensor{
 public:
-    /*
-     * @brief Construct a new UltraSonicSensor object
-     *
-     * @param triggerPin The pin number for the Trigger Pin
-     * @param echoPin    The pin number for the Echo Pin
-     * */
-    UltraSonicSensor(int triggerPin, int echoPin);
+   UltraSonicSensor();
     /**
-     * @brief The begin function. Sets the pins as they need
-     * to be
+     * @brief Starts a UltraSonicSensor instance with the correspondent pins
+     *
+     * @param triggerPin The pin of the trigger for the ultrasonic sensor
+     * @param echoPin    The pin of the echo for the ultrasonic sensor
      *
      * */
-    void initialize();
+    void initialize(int triggerPin, int echoPin);
     /**
      * @brief Gets the distance (cm) to the nearest object
      *

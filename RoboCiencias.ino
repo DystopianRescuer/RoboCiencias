@@ -2,8 +2,8 @@
 #include "UltrasonicSensor.h"
 
 //Indicaciones de pines
-const int Trigger = 7;
-const int Echo = 6;
+const int trigger = 7;
+const int echo = 6;
 const int pinRightLeg = 3;
 const int pinLeftLeg = 2;
 const int pinRightArm = 4;
@@ -16,14 +16,14 @@ Servo rightLeg;
 Servo leftLeg;
 
 // Representacion simbolica de sensor/es sonico/s
-UltraSonicSensor sensor1(Trigger, Echo);
+UltraSonicSensor sensor1;
 
 long duration;
 int distance;
 
 void setup() {
   //Configuraciones iniciales
-  sensor1.initialize();
+  sensor1.initialize(trigger, echo);
   rightLeg.attach(pinRightLeg);
   leftLeg.attach(pinLeftLeg);
   rightArm.attach(pinRightArm);
@@ -41,45 +41,19 @@ void setup() {
 void loop() {
 
   distance = sensor1.measureDistance();
-  Serial.print("Distancia: ");
-  Serial.print(distance);
-  Serial.print("cm");
-  Serial.println();
+  //////////////////////////////////
+  // Serial.print("Distancia: "); //
+  // Serial.print(distance);      //
+  // Serial.print("cm");          //
+  // Serial.println();            //
+  //////////////////////////////////
   delay(100);
 
   //Acciones
   if(distance == 0){
-
   }else{
-    buscarYMover(distance);
   }
 
 
  }
 
-void buscarYMover(int distance){
-  if (distance > 0 && distance <= 50) {
-    digitalWrite(miled, HIGH), patarriba.write(105), patabajo.write(75);
-     delay (200);
-   digitalWrite(miled, LOW), patarriba.write(75), patabajo.write(105);
-     delay (200);
-  }
-
-  if (distance > 51) {
-
-
-      digitalWrite(miled, HIGH), patarriba.write(75),  patabajo.write(90);
-     delay (200);
-      digitalWrite(miled, HIGH), patarriba.write(105),  patabajo.write(90);
-     delay (200);
-  }
-}
-
-void madrearObjetoCercano(){
-
-  while(distancia ==0){
-    punioizq.write(75), delay(100), punioizq.write(105);
-    punioder.write(75), delay(100), punioder.write(105);
-  }
-
-}

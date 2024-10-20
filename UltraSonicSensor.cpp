@@ -1,12 +1,10 @@
 #include "UltrasonicSensor.h"
 #include <Arduino.h>
 
-UltraSonicSensor::UltraSonicSensor(int triggerPin, int echoPin){
-    triggerPin = triggerPin;
-    echoPin = echoPin;
+UltraSonicSensor::UltraSonicSensor(){
 }
 
-void UltraSonicSensor::initialize(){
+void UltraSonicSensor::initialize(int triggerPin, int echoPin){
    pinMode(triggerPin, OUTPUT);
    pinMode(echoPin, INPUT);
 }
@@ -22,6 +20,6 @@ int UltraSonicSensor::measureDistance(){
   t = pulseIn(echoPin, HIGH);
   d = t/59;
 
-  return d;
+  return (int)d;
 
 }
