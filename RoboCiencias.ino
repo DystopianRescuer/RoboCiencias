@@ -1,5 +1,6 @@
 #include <Servo.h>
 #include "UltrasonicSensor.h"
+#include "Legs.h"
 
 //Indicaciones de pines
 const int trigger = 7;
@@ -10,10 +11,7 @@ const int pinRightArm = 4;
 const int pinLeftArm = 5;
 
 // Representaciones simbolicas de Servos
-Servo rightArm;
-Servo leftArm;
-Servo rightLeg;
-Servo leftLeg;
+Legs legs;
 
 // Representacion simbolica de sensor/es sonico/s
 UltraSonicSensor sensor1;
@@ -24,36 +22,32 @@ int distance;
 void setup() {
   //Configuraciones iniciales
   sensor1.initialize(trigger, echo);
-  rightLeg.attach(pinRightLeg);
-  leftLeg.attach(pinLeftLeg);
-  rightArm.attach(pinRightArm);
-  leftArm.attach(pinLeftArm);
+  legs.attach(pinLeftLeg, pinRightLeg);
 
-  leftLeg.write(0);
-  rightLeg.write(0);
-  rightArm.write(0);
-  leftArm.write(0);
 
   //Debug
-  //Serial.begin(9600);
+  Serial.begin(9600);
 }
 
 void loop() {
+  legs.write(LEFT, 45);
+  legs.write(RIGHT, 45);
+  delay(1000);
+  legs.write(LEFT, 90);
+  legs.write(RIGHT, 90);
 
-  distance = sensor1.measureDistance();
+//  distance = sensor1.measureDistance();
   //////////////////////////////////
   // Serial.print("Distancia: "); //
   // Serial.print(distance);      //
   // Serial.print("cm");          //
   // Serial.println();            //
   //////////////////////////////////
-  delay(100);
 
   //Acciones
-  if(distance == 0){
-  }else{
-  }
+ // if(distance == 0){
+  //}else{
+  //}
 
 
  }
-
