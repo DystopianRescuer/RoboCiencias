@@ -1,0 +1,183 @@
+\hypertarget{classLegs}{}\doxysection{Legs Class Reference}
+\label{classLegs}\index{Legs@{Legs}}
+
+
+{\ttfamily \#include $<$Legs.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLegs_a375b56dae63069e0cc8c1ea658fb83e6}{Legs}} ()
+\item 
+void \mbox{\hyperlink{classLegs_af47d68db5d58751b91d4c774e6a2142f}{attach}} (int l\+Leg, int r\+Leg)
+\begin{DoxyCompactList}\small\item\em Initializer of the class for the two legged mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLegs_a74ec1a54dccc6018095b3f25c937f402}{attach}} (int l\+Leg, int r\+Leg, int c\+Leg)
+\begin{DoxyCompactList}\small\item\em Initializer of the class for the three legged mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLegs_a14d4fcd9e3028919366c31a5da0dfb43}{walk}} (double speed)
+\begin{DoxyCompactList}\small\item\em Macro action for front start walking. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLegs_a97ace22134a509b30af4c7a171bc7432}{rotate\+Left}} (double speed)
+\begin{DoxyCompactList}\small\item\em Macro action for left rotation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLegs_a049a3840ae1d6d0cbe571bc719c84c71}{rotate\+Right}} (double speed)
+\begin{DoxyCompactList}\small\item\em Macro action for right rotation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLegs_a811c9c05ac466859c35bbd4b47f653e3}{walk\+Backwards}} (double speed)
+\begin{DoxyCompactList}\small\item\em Macro action for walk backwards rotation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLegs_ac34784c0ab78823b672baf3e2daa6c32}{stance}} (\mbox{\hyperlink{Legs_8h_ac52d397775aec16ec2a838f2a8aff4af}{Stances}} stance)
+\begin{DoxyCompactList}\small\item\em For setting the stance of the legs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLegs_a8165b3a3f8c4a5b713ab7572782f470e}{write}} (\mbox{\hyperlink{Legs_8h_adb1fad3b6a121acd6db0b9eda7fd5111}{Positions}} p, int deg)
+\begin{DoxyCompactList}\small\item\em Wrapper method for Servo.\+write. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLegs_a375b56dae63069e0cc8c1ea658fb83e6}\label{classLegs_a375b56dae63069e0cc8c1ea658fb83e6}} 
+\index{Legs@{Legs}!Legs@{Legs}}
+\index{Legs@{Legs}!Legs@{Legs}}
+\doxysubsubsection{\texorpdfstring{Legs()}{Legs()}}
+{\footnotesize\ttfamily Legs\+::\+Legs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLegs_af47d68db5d58751b91d4c774e6a2142f}\label{classLegs_af47d68db5d58751b91d4c774e6a2142f}} 
+\index{Legs@{Legs}!attach@{attach}}
+\index{attach@{attach}!Legs@{Legs}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Legs\+::attach (\begin{DoxyParamCaption}\item[{int}]{l\+Leg,  }\item[{int}]{r\+Leg }\end{DoxyParamCaption})}
+
+
+
+Initializer of the class for the two legged mode. 
+
+It attaches the corresponding pins to Servo objects, in preparation to posterior manipulation of the legs.
+
+
+\begin{DoxyParams}{Parameters}
+{\em l\+Leg} & pin of the Left Leg \\
+\hline
+{\em r\+Leg} & pin of the Right Leg \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLegs_a74ec1a54dccc6018095b3f25c937f402}\label{classLegs_a74ec1a54dccc6018095b3f25c937f402}} 
+\index{Legs@{Legs}!attach@{attach}}
+\index{attach@{attach}!Legs@{Legs}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Legs\+::attach (\begin{DoxyParamCaption}\item[{int}]{l\+Leg,  }\item[{int}]{r\+Leg,  }\item[{int}]{c\+Leg }\end{DoxyParamCaption})}
+
+
+
+Initializer of the class for the three legged mode. 
+
+Attaches the corresponding pins to the Servo objects.
+
+
+\begin{DoxyParams}{Parameters}
+{\em l\+Leg} & pin of the Left Leg \\
+\hline
+{\em r\+Leg} & pin of the Right Leg \\
+\hline
+{\em c\+Leg} & pin of the Center Leg \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLegs_a97ace22134a509b30af4c7a171bc7432}\label{classLegs_a97ace22134a509b30af4c7a171bc7432}} 
+\index{Legs@{Legs}!rotateLeft@{rotateLeft}}
+\index{rotateLeft@{rotateLeft}!Legs@{Legs}}
+\doxysubsubsection{\texorpdfstring{rotateLeft()}{rotateLeft()}}
+{\footnotesize\ttfamily void Legs\+::rotate\+Left (\begin{DoxyParamCaption}\item[{double}]{speed }\end{DoxyParamCaption})}
+
+
+
+Macro action for left rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & A double value used for the percentage of speed we want to use for the action. It should be bounded to \mbox{[}0,1\mbox{]} with 1 being the maximum stable speed for the intended action. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLegs_a049a3840ae1d6d0cbe571bc719c84c71}\label{classLegs_a049a3840ae1d6d0cbe571bc719c84c71}} 
+\index{Legs@{Legs}!rotateRight@{rotateRight}}
+\index{rotateRight@{rotateRight}!Legs@{Legs}}
+\doxysubsubsection{\texorpdfstring{rotateRight()}{rotateRight()}}
+{\footnotesize\ttfamily void Legs\+::rotate\+Right (\begin{DoxyParamCaption}\item[{double}]{speed }\end{DoxyParamCaption})}
+
+
+
+Macro action for right rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & A double value used for the percentage of speed we want to use for the action. It should be bounded to \mbox{[}0,1\mbox{]} with 1 being the maximum stable speed for the intended action. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLegs_ac34784c0ab78823b672baf3e2daa6c32}\label{classLegs_ac34784c0ab78823b672baf3e2daa6c32}} 
+\index{Legs@{Legs}!stance@{stance}}
+\index{stance@{stance}!Legs@{Legs}}
+\doxysubsubsection{\texorpdfstring{stance()}{stance()}}
+{\footnotesize\ttfamily void Legs\+::stance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Legs_8h_ac52d397775aec16ec2a838f2a8aff4af}{Stances}}}]{stance }\end{DoxyParamCaption})}
+
+
+
+For setting the stance of the legs. 
+
+It should be used also as a stand up method for stopping any other action.
+
+
+\begin{DoxyParams}{Parameters}
+{\em stance} & The stance to be setted. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLegs_a14d4fcd9e3028919366c31a5da0dfb43}\label{classLegs_a14d4fcd9e3028919366c31a5da0dfb43}} 
+\index{Legs@{Legs}!walk@{walk}}
+\index{walk@{walk}!Legs@{Legs}}
+\doxysubsubsection{\texorpdfstring{walk()}{walk()}}
+{\footnotesize\ttfamily void Legs\+::walk (\begin{DoxyParamCaption}\item[{double}]{speed }\end{DoxyParamCaption})}
+
+
+
+Macro action for front start walking. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & A double value used for the percentage of speed we want to use for the action. It should be bounded to \mbox{[}0,1\mbox{]} with 1 being the maximum stable speed for the intended action. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLegs_a811c9c05ac466859c35bbd4b47f653e3}\label{classLegs_a811c9c05ac466859c35bbd4b47f653e3}} 
+\index{Legs@{Legs}!walkBackwards@{walkBackwards}}
+\index{walkBackwards@{walkBackwards}!Legs@{Legs}}
+\doxysubsubsection{\texorpdfstring{walkBackwards()}{walkBackwards()}}
+{\footnotesize\ttfamily void Legs\+::walk\+Backwards (\begin{DoxyParamCaption}\item[{double}]{speed }\end{DoxyParamCaption})}
+
+
+
+Macro action for walk backwards rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & A double value used for the percentage of speed we want to use for the action. It should be bounded to \mbox{[}0,1\mbox{]} with 1 being the maximum stable speed for the intended action. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLegs_a8165b3a3f8c4a5b713ab7572782f470e}\label{classLegs_a8165b3a3f8c4a5b713ab7572782f470e}} 
+\index{Legs@{Legs}!write@{write}}
+\index{write@{write}!Legs@{Legs}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void Legs\+::write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Legs_8h_adb1fad3b6a121acd6db0b9eda7fd5111}{Positions}}}]{p,  }\item[{int}]{deg }\end{DoxyParamCaption})}
+
+
+
+Wrapper method for Servo.\+write. 
+
+It uses a unified degree system for both sides of the robot so we could set n degrees to both sides and keep the robot legs in the same position (as a mirror)
+
+A priori this shouldn\textquotesingle{}t be used frequently. It is only included as a manual way for setting the degrees in the servos but all the other methods should suffice for the intended motive of this class.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The side we want to write \\
+\hline
+{\em deg} & The degree we want to write \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/mrtaichi/\+Documents/\+Codigos/\+Seminario\+Robotica/\+Robo\+Ciencias/\mbox{\hyperlink{Legs_8h}{Legs.\+h}}\item 
+/home/mrtaichi/\+Documents/\+Codigos/\+Seminario\+Robotica/\+Robo\+Ciencias/\mbox{\hyperlink{Legs_8cpp}{Legs.\+cpp}}\end{DoxyCompactItemize}

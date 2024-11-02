@@ -1,0 +1,83 @@
+\hypertarget{Legs_8h}{}\doxysection{/home/mrtaichi/\+Documents/\+Codigos/\+Seminario\+Robotica/\+Robo\+Ciencias/\+Legs.h File Reference}
+\label{Legs_8h}\index{/home/mrtaichi/Documents/Codigos/SeminarioRobotica/RoboCiencias/Legs.h@{/home/mrtaichi/Documents/Codigos/SeminarioRobotica/RoboCiencias/Legs.h}}
+{\ttfamily \#include $<$Servo.\+h$>$}\newline
+Include dependency graph for Legs.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{Legs_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Legs_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classLegs}{Legs}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{Legs_8h_adb1fad3b6a121acd6db0b9eda7fd5111}{Positions}} \{ \mbox{\hyperlink{Legs_8h_adb1fad3b6a121acd6db0b9eda7fd5111adb45120aafd37a973140edee24708065}{LEFT}}
+, \mbox{\hyperlink{Legs_8h_adb1fad3b6a121acd6db0b9eda7fd5111aec8379af7490bb9eaaf579cf17876f38}{RIGHT}}
+, \mbox{\hyperlink{Legs_8h_adb1fad3b6a121acd6db0b9eda7fd5111a2159ffbd3a68037511ab5ab4dd35ace7}{CENTER}}
+ \}
+\begin{DoxyCompactList}\small\item\em Class used for easier handling of the robot\textquotesingle{}s legs. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{Legs_8h_ac52d397775aec16ec2a838f2a8aff4af}{Stances}} \{ \mbox{\hyperlink{Legs_8h_ac52d397775aec16ec2a838f2a8aff4afa831c130f9c83adc963152d232a9d61c7}{ATTACK}}
+, \mbox{\hyperlink{Legs_8h_ac52d397775aec16ec2a838f2a8aff4afa50d1448013c6f17125caee18aa418af7}{NORMAL}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{Legs_8h_adb1fad3b6a121acd6db0b9eda7fd5111}\label{Legs_8h_adb1fad3b6a121acd6db0b9eda7fd5111}} 
+\index{Legs.h@{Legs.h}!Positions@{Positions}}
+\index{Positions@{Positions}!Legs.h@{Legs.h}}
+\doxysubsubsection{\texorpdfstring{Positions}{Positions}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{Legs_8h_adb1fad3b6a121acd6db0b9eda7fd5111}{Positions}}}
+
+
+
+Class used for easier handling of the robot\textquotesingle{}s legs. 
+
+It has two modes depending on the quantity of legs\+: 1) Two legged mode\+: 2) Three legged mode\+:
+
+The stances of combat are predefined positions for the legs that are used for specific cases. Also, they are the way of stopping the movement of the robot.
+
+ATTACK stance\+: Inclined to the back and with a lower center of mass. The ideal stance for offensive actions NORMAL stance\+: With normal degrees and leg position. The ideal stance for walking actions \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT@{LEFT}!Legs.h@{Legs.h}}\index{Legs.h@{Legs.h}!LEFT@{LEFT}}}\mbox{\Hypertarget{Legs_8h_adb1fad3b6a121acd6db0b9eda7fd5111adb45120aafd37a973140edee24708065}\label{Legs_8h_adb1fad3b6a121acd6db0b9eda7fd5111adb45120aafd37a973140edee24708065}} 
+LEFT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT@{RIGHT}!Legs.h@{Legs.h}}\index{Legs.h@{Legs.h}!RIGHT@{RIGHT}}}\mbox{\Hypertarget{Legs_8h_adb1fad3b6a121acd6db0b9eda7fd5111aec8379af7490bb9eaaf579cf17876f38}\label{Legs_8h_adb1fad3b6a121acd6db0b9eda7fd5111aec8379af7490bb9eaaf579cf17876f38}} 
+RIGHT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CENTER@{CENTER}!Legs.h@{Legs.h}}\index{Legs.h@{Legs.h}!CENTER@{CENTER}}}\mbox{\Hypertarget{Legs_8h_adb1fad3b6a121acd6db0b9eda7fd5111a2159ffbd3a68037511ab5ab4dd35ace7}\label{Legs_8h_adb1fad3b6a121acd6db0b9eda7fd5111a2159ffbd3a68037511ab5ab4dd35ace7}} 
+CENTER&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{Legs_8h_ac52d397775aec16ec2a838f2a8aff4af}\label{Legs_8h_ac52d397775aec16ec2a838f2a8aff4af}} 
+\index{Legs.h@{Legs.h}!Stances@{Stances}}
+\index{Stances@{Stances}!Legs.h@{Legs.h}}
+\doxysubsubsection{\texorpdfstring{Stances}{Stances}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{Legs_8h_ac52d397775aec16ec2a838f2a8aff4af}{Stances}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ATTACK@{ATTACK}!Legs.h@{Legs.h}}\index{Legs.h@{Legs.h}!ATTACK@{ATTACK}}}\mbox{\Hypertarget{Legs_8h_ac52d397775aec16ec2a838f2a8aff4afa831c130f9c83adc963152d232a9d61c7}\label{Legs_8h_ac52d397775aec16ec2a838f2a8aff4afa831c130f9c83adc963152d232a9d61c7}} 
+ATTACK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NORMAL@{NORMAL}!Legs.h@{Legs.h}}\index{Legs.h@{Legs.h}!NORMAL@{NORMAL}}}\mbox{\Hypertarget{Legs_8h_ac52d397775aec16ec2a838f2a8aff4afa50d1448013c6f17125caee18aa418af7}\label{Legs_8h_ac52d397775aec16ec2a838f2a8aff4afa50d1448013c6f17125caee18aa418af7}} 
+NORMAL&\\
+\hline
+
+\end{DoxyEnumFields}

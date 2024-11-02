@@ -1,0 +1,65 @@
+\hypertarget{classUltraSonicSensor}{}\doxysection{Ultra\+Sonic\+Sensor Class Reference}
+\label{classUltraSonicSensor}\index{UltraSonicSensor@{UltraSonicSensor}}
+
+
+{\ttfamily \#include $<$Ultrasonic\+Sensor.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUltraSonicSensor_a16cd875cc8a3548852f4d27632f4f0c3}{Ultra\+Sonic\+Sensor}} ()
+\item 
+void \mbox{\hyperlink{classUltraSonicSensor_ad871c185a1c18cd23e56a7e6f603b742}{initialize}} (int trigger\+Pin, int echo\+Pin)
+\begin{DoxyCompactList}\small\item\em Starts a \mbox{\hyperlink{classUltraSonicSensor}{Ultra\+Sonic\+Sensor}} instance with the correspondent pins. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUltraSonicSensor_a67442992e5b5e124dd250d587a18f03c}{measure\+Distance}} ()
+\begin{DoxyCompactList}\small\item\em Gets the distance (cm) to the nearest object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUltraSonicSensor_a16cd875cc8a3548852f4d27632f4f0c3}\label{classUltraSonicSensor_a16cd875cc8a3548852f4d27632f4f0c3}} 
+\index{UltraSonicSensor@{UltraSonicSensor}!UltraSonicSensor@{UltraSonicSensor}}
+\index{UltraSonicSensor@{UltraSonicSensor}!UltraSonicSensor@{UltraSonicSensor}}
+\doxysubsubsection{\texorpdfstring{UltraSonicSensor()}{UltraSonicSensor()}}
+{\footnotesize\ttfamily Ultra\+Sonic\+Sensor\+::\+Ultra\+Sonic\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUltraSonicSensor_ad871c185a1c18cd23e56a7e6f603b742}\label{classUltraSonicSensor_ad871c185a1c18cd23e56a7e6f603b742}} 
+\index{UltraSonicSensor@{UltraSonicSensor}!initialize@{initialize}}
+\index{initialize@{initialize}!UltraSonicSensor@{UltraSonicSensor}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Ultra\+Sonic\+Sensor\+::initialize (\begin{DoxyParamCaption}\item[{int}]{trigger\+Pin,  }\item[{int}]{echo\+Pin }\end{DoxyParamCaption})}
+
+
+
+Starts a \mbox{\hyperlink{classUltraSonicSensor}{Ultra\+Sonic\+Sensor}} instance with the correspondent pins. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trigger\+Pin} & The pin of the trigger for the ultrasonic sensor \\
+\hline
+{\em echo\+Pin} & The pin of the echo for the ultrasonic sensor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classUltraSonicSensor_a67442992e5b5e124dd250d587a18f03c}\label{classUltraSonicSensor_a67442992e5b5e124dd250d587a18f03c}} 
+\index{UltraSonicSensor@{UltraSonicSensor}!measureDistance@{measureDistance}}
+\index{measureDistance@{measureDistance}!UltraSonicSensor@{UltraSonicSensor}}
+\doxysubsubsection{\texorpdfstring{measureDistance()}{measureDistance()}}
+{\footnotesize\ttfamily int Ultra\+Sonic\+Sensor\+::measure\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the distance (cm) to the nearest object. 
+
+It sends a pulse to the trigger pin that then expects from the echo pin. Based on the info collected from this pulse it gives the distance in centimeters to the nearest object from the sensor.
+
+\begin{DoxyReturn}{Returns}
+The distance in centimeters for the nearest object detected by the sensor. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/mrtaichi/\+Documents/\+Codigos/\+Seminario\+Robotica/\+Robo\+Ciencias/\mbox{\hyperlink{UltrasonicSensor_8h}{Ultrasonic\+Sensor.\+h}}\item 
+/home/mrtaichi/\+Documents/\+Codigos/\+Seminario\+Robotica/\+Robo\+Ciencias/\mbox{\hyperlink{UltraSonicSensor_8cpp}{Ultra\+Sonic\+Sensor.\+cpp}}\end{DoxyCompactItemize}
