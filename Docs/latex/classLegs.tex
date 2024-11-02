@@ -23,6 +23,8 @@ void \mbox{\hyperlink{classLegs_a811c9c05ac466859c35bbd4b47f653e3}{walk\+Backwar
 \begin{DoxyCompactList}\small\item\em Macro action for walk backwards rotation. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classLegs_ac34784c0ab78823b672baf3e2daa6c32}{stance}} (\mbox{\hyperlink{Legs_8h_ac52d397775aec16ec2a838f2a8aff4af}{Stances}} stance)
 \begin{DoxyCompactList}\small\item\em For setting the stance of the legs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLegs_a379500d804200ba0ff2c5e01cfc7f266}{stance}} ()
+\begin{DoxyCompactList}\small\item\em For getting the legs at stance. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classLegs_a8165b3a3f8c4a5b713ab7572782f470e}{write}} (\mbox{\hyperlink{Legs_8h_adb1fad3b6a121acd6db0b9eda7fd5111}{Positions}} p, int deg)
 \begin{DoxyCompactList}\small\item\em Wrapper method for Servo.\+write. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -107,17 +109,27 @@ Macro action for right rotation.
 {\em speed} & A double value used for the percentage of speed we want to use for the action. It should be bounded to \mbox{[}0,1\mbox{]} with 1 being the maximum stable speed for the intended action. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classLegs_ac34784c0ab78823b672baf3e2daa6c32}\label{classLegs_ac34784c0ab78823b672baf3e2daa6c32}} 
+\mbox{\Hypertarget{classLegs_a379500d804200ba0ff2c5e01cfc7f266}\label{classLegs_a379500d804200ba0ff2c5e01cfc7f266}} 
 \index{Legs@{Legs}!stance@{stance}}
 \index{stance@{stance}!Legs@{Legs}}
-\doxysubsubsection{\texorpdfstring{stance()}{stance()}}
+\doxysubsubsection{\texorpdfstring{stance()}{stance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Legs\+::stance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+For getting the legs at stance. 
+
+If no stance is declared, this method works as a setter for the position of the legs in the current stance. This is the method that should be used for this action and no other should be needed or used for it. \mbox{\Hypertarget{classLegs_ac34784c0ab78823b672baf3e2daa6c32}\label{classLegs_ac34784c0ab78823b672baf3e2daa6c32}} 
+\index{Legs@{Legs}!stance@{stance}}
+\index{stance@{stance}!Legs@{Legs}}
+\doxysubsubsection{\texorpdfstring{stance()}{stance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void Legs\+::stance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Legs_8h_ac52d397775aec16ec2a838f2a8aff4af}{Stances}}}]{stance }\end{DoxyParamCaption})}
 
 
 
 For setting the stance of the legs. 
 
-It should be used also as a stand up method for stopping any other action.
+The stance sets the default position of the legs, information that\textquotesingle{}ll be used by other methods for the movement dynamics
 
 
 \begin{DoxyParams}{Parameters}

@@ -96,6 +96,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac34784c0ab78823b672baf3e2daa6c32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLegs.html#ac34784c0ab78823b672baf3e2daa6c32">stance</a> (<a class="el" href="Legs_8h.html#ac52d397775aec16ec2a838f2a8aff4af">Stances</a> stance)</td></tr>
 <tr class="memdesc:ac34784c0ab78823b672baf3e2daa6c32"><td class="mdescLeft">&#160;</td><td class="mdescRight">For setting the stance of the legs.  <a href="classLegs.html#ac34784c0ab78823b672baf3e2daa6c32">More...</a><br /></td></tr>
 <tr class="separator:ac34784c0ab78823b672baf3e2daa6c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a379500d804200ba0ff2c5e01cfc7f266"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLegs.html#a379500d804200ba0ff2c5e01cfc7f266">stance</a> ()</td></tr>
+<tr class="memdesc:a379500d804200ba0ff2c5e01cfc7f266"><td class="mdescLeft">&#160;</td><td class="mdescRight">For getting the legs at stance.  <a href="classLegs.html#a379500d804200ba0ff2c5e01cfc7f266">More...</a><br /></td></tr>
+<tr class="separator:a379500d804200ba0ff2c5e01cfc7f266"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8165b3a3f8c4a5b713ab7572782f470e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLegs.html#a8165b3a3f8c4a5b713ab7572782f470e">write</a> (<a class="el" href="Legs_8h.html#adb1fad3b6a121acd6db0b9eda7fd5111">Positions</a> p, int deg)</td></tr>
 <tr class="memdesc:a8165b3a3f8c4a5b713ab7572782f470e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper method for Servo.write.  <a href="classLegs.html#a8165b3a3f8c4a5b713ab7572782f470e">More...</a><br /></td></tr>
 <tr class="separator:a8165b3a3f8c4a5b713ab7572782f470e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -254,8 +257,28 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a379500d804200ba0ff2c5e01cfc7f266"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a379500d804200ba0ff2c5e01cfc7f266">&#9670;&nbsp;</a></span>stance() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Legs::stance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For getting the legs at stance. </p>
+<p>If no stance is declared, this method works as a setter for the position of the legs in the current stance. This is the method that should be used for this action and no other should be needed or used for it. </p>
+
+</div>
+</div>
 <a id="ac34784c0ab78823b672baf3e2daa6c32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac34784c0ab78823b672baf3e2daa6c32">&#9670;&nbsp;</a></span>stance()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac34784c0ab78823b672baf3e2daa6c32">&#9670;&nbsp;</a></span>stance() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -271,7 +294,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>For setting the stance of the legs. </p>
-<p>It should be used also as a stand up method for stopping any other action.</p>
+<p>The stance sets the default position of the legs, information that'll be used by other methods for the movement dynamics</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">stance</td><td>The stance to be setted. </td></tr>
