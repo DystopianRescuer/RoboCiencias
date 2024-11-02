@@ -23,6 +23,7 @@ class Legs{
         Servo leftLeg;
         Servo rightLeg;
         Servo centerLeg;
+        Stance stance;
     public:
         Legs();
         /**
@@ -78,11 +79,18 @@ class Legs{
         /**
          * @brief For setting the stance of the legs
          *
-         * It should be used also as a stand up method for stopping any other action.
+         * The stance sets the default position of the legs, information that'll be used by other methods for the movement dynamics
          *
          * @param stance The stance to be setted.
          */
         void stance(Stances stance);
+        /**
+         * @brief For getting the legs at stance
+         *
+         * If no stance is declared, this method works as a setter for the position of the legs in the current stance. This is
+         * the method that should be used for this action and no other should be needed or used for it.
+         */
+        void stance();
         /**
          * @brief Wrapper method for Servo.write
          *
