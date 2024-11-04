@@ -5,6 +5,7 @@
 /**
  * Maximum safer speeds for the robot movements. This are intended as a safeguard so we can't move the robot faster than it is stable
  * to move.
+ * TO BE CALIBRATED
  */
 double static const MAXWALKINGSPEED = 100;
 double static const MAXROTATINGSPEED = 100;
@@ -12,12 +13,14 @@ double static const MAXBACKWALKINGSPEED = 100;
 
 /**
  * Default leg angles for the specified Stances
+ * CALIBRATED
  */
 int static const ATTACKANGLE = 5;
 int static const NORMALANGLE = 50;
 
 /**
  * Standard "step" values for macro actions. This is the size in degrees that'll be taken in each macro action for servo movements.
+ * TO BE CALIBRATED
  */
 int static const walkingStepSize = 35;
 int static const rotatingStepSize = 35;
@@ -26,6 +29,9 @@ Legs::Legs(){
 }
 
 void Legs::write(Positions p, int deg){
+    if(deg > 180){
+        return;
+    }
     switch (p){
         case LEFT: leftLeg.write(180-deg); break;
         case RIGHT: rightLeg.write(deg); break;
@@ -70,6 +76,8 @@ void Legs::attach(int lLeg, int rLeg, int cLeg){
    this->stance(NORMAL);
 }
 void Legs::walk(double speed){
+    if(speed > 1) return;
+
     //initial position
     this->stance();
 
@@ -84,6 +92,7 @@ void Legs::walk(double speed){
 }
 
 void Legs::rotateLeft(double speed){
+    if(speed > 1) return;
     //initial position
     this->stance();
     //action
@@ -93,6 +102,7 @@ void Legs::rotateLeft(double speed){
 }
 
 void Legs::rotateRight(double speed){
+    if(speed > 1) return;
     //initial position
     this->stance();
     //action
@@ -102,6 +112,7 @@ void Legs::rotateRight(double speed){
 }
 
 void Legs::walkBackwards(double speed){
+    if(speed > 1) return;
     //initial position
     this->stance();
     //action
