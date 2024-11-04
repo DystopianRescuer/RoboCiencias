@@ -13,8 +13,8 @@ double static const MAXBACKWALKINGSPEED = 100;
 /**
  * Default leg angles for the specified Stances
  */
-int static const ATTACKANGLE = 135;
-int static const NORMALANGLE = 90;
+int static const ATTACKANGLE = 5;
+int static const NORMALANGLE = 50;
 
 /**
  * Standard "step" values for macro actions. This is the size in degrees that'll be taken in each macro action for servo movements.
@@ -27,8 +27,8 @@ Legs::Legs(){
 
 void Legs::write(Positions p, int deg){
     switch (p){
-        case LEFT: leftLeg.write(deg); break;
-        case RIGHT: rightLeg.write(180-deg); break;
+        case LEFT: leftLeg.write(180-deg); break;
+        case RIGHT: rightLeg.write(deg); break;
         case CENTER:
             //Following the hack used for not setting up a center leg
             if(&centerLeg != &rightLeg)
@@ -72,13 +72,15 @@ void Legs::attach(int lLeg, int rLeg, int cLeg){
 void Legs::walk(double speed){
     //initial position
     this->stance();
+
+    delay(MAXWALKINGSPEED / speed);
     //action
-    this->write(LEFT, leftLeg.read() + walkingStepSize);
-    delay(MAXWALKINGSPEED / speed);
     this->write(LEFT, leftLeg.read() - walkingStepSize);
-    this->write(RIGHT, rightLeg.read() + walkingStepSize);
     delay(MAXWALKINGSPEED / speed);
+    this->write(LEFT, leftLeg.read() + walkingStepSize);
     this->write(RIGHT, rightLeg.read() - walkingStepSize);
+    delay(MAXWALKINGSPEED / speed);
+    this->write(RIGHT, rightLeg.read() + walkingStepSize);
 }
 
 void Legs::rotateLeft(double speed){
