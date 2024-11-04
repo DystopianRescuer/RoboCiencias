@@ -77,8 +77,8 @@ void Legs::walk(double speed){
     //action
     this->write(LEFT, leftLeg.read() - walkingStepSize);
     delay(MAXWALKINGSPEED / speed);
-    this->write(LEFT, leftLeg.read() + walkingStepSize);
-    this->write(RIGHT, rightLeg.read() - walkingStepSize);
+    this->write(LEFT, leftLeg.read() - walkingStepSize);
+    this->write(RIGHT, rightLeg.read() + walkingStepSize);
     delay(MAXWALKINGSPEED / speed);
     this->write(RIGHT, rightLeg.read() + walkingStepSize);
 }

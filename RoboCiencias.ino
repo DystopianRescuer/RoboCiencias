@@ -29,7 +29,7 @@ void setup() {
 }
 
 void loop() {
-     legs.walk(0.5);
+     legs.walk(1);
 //  distance = sensor1.measureDistance();
   //////////////////////////////////
   // Serial.print("Distancia: "); //
