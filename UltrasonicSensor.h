@@ -1,6 +1,5 @@
 #ifndef ULTRASONICSENSOR_H_
 #define ULTRASONICSENSOR_H_
-#endif // ULTRASONICSENSOR_H_
 
 /*
  * @brief Class used for easier handling of the
@@ -39,3 +38,5 @@ private:
     int triggerPin;
     int echoPin;
 };
+
+#endif // ULTRASONICSENSOR_H_

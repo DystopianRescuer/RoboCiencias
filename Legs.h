@@ -1,8 +1,7 @@
 #ifndef LEGS_H_
 #define LEGS_H_
-#endif // LEGS_H_
 
-#include <Servo.h>;
+#include <Servo.h>
 /**
  *@brief Class used for easier handling of the robot's legs
  *
@@ -18,12 +17,13 @@
  **/
 enum Positions{ LEFT, RIGHT, CENTER};
 enum Stances {ATTACK, NORMAL};
+
 class Legs{
     private:
         Servo leftLeg;
         Servo rightLeg;
         Servo centerLeg;
-        Stance stance;
+        Stances currentStance;
     public:
         Legs();
         /**
@@ -106,3 +106,5 @@ class Legs{
         void write(Positions p, int deg);
 };
 
+
+#endif // LEGS_H_

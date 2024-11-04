@@ -6,15 +6,21 @@
  * Maximum safer speeds for the robot movements. This are intended as a safeguard so we can't move the robot faster than it is stable
  * to move.
  */
-double static MAXWALKINGSPEED = 100;
-double static MAXROTATINGSPEED = 100;
-double static MAXBACKWALKINGSPEED = 100;
+double static const MAXWALKINGSPEED = 100;
+double static const MAXROTATINGSPEED = 100;
+double static const MAXBACKWALKINGSPEED = 100;
 
 /**
  * Default leg angles for the specified Stances
  */
-int static ATTACKANGLE = 135;
-int static NORMALANGLE = 90;
+int static const ATTACKANGLE = 135;
+int static const NORMALANGLE = 90;
+
+/**
+ * Standard "step" values for macro actions. This is the size in degrees that'll be taken in each macro action for servo movements.
+ */
+int static const walkingStepSize = 35;
+int static const rotatingStepSize = 35;
 
 Legs::Legs(){
 }
@@ -24,17 +30,19 @@ void Legs::write(Positions p, int deg){
         case LEFT: leftLeg.write(deg); break;
         case RIGHT: rightLeg.write(180-deg); break;
         case CENTER:
-            if(centerLeg)
-                centerLeg.write(deg)
+            //Following the hack used for not setting up a center leg
+            if(&centerLeg != &rightLeg)
+                centerLeg.write(deg);
             break;
     }
 }
 void Legs::stance(Stances stance){
-   this->stance = stance;
+   this->currentStance = stance;
+   this->stance();
 }
 
 void Legs::stance(){
-    switch (this->stance){
+    switch (this->currentStance){
         case NORMAL:
             this->write(LEFT, NORMALANGLE);
             this->write(RIGHT, NORMALANGLE);
@@ -50,8 +58,9 @@ void Legs::stance(){
 void Legs::attach(int lLeg, int rLeg){
    leftLeg.attach(lLeg);
    rightLeg.attach(rLeg);
+   // Hack for avoiding setting up a center leg in two legged mode
+   centerLeg = rightLeg;
    this->stance(NORMAL);
-   this->stance();
 }
 
 void Legs::attach(int lLeg, int rLeg, int cLeg){
@@ -59,43 +68,45 @@ void Legs::attach(int lLeg, int rLeg, int cLeg){
    rightLeg.attach(rLeg);
    centerLeg.attach(cLeg);
    this->stance(NORMAL);
-   this->stance();
 }
 void Legs::walk(double speed){
     //initial position
     this->stance();
     //action
-    this->write(LEFT, 135);
+    this->write(LEFT, leftLeg.read() + walkingStepSize);
     delay(MAXWALKINGSPEED / speed);
-    this->write(LEFT, 90);
-    this->write(RIGHT, 135);
+    this->write(LEFT, leftLeg.read() - walkingStepSize);
+    this->write(RIGHT, rightLeg.read() + walkingStepSize);
     delay(MAXWALKINGSPEED / speed);
-    this->write(RIGHT, 90);
+    this->write(RIGHT, rightLeg.read() - walkingStepSize);
 }
 
 void Legs::rotateLeft(double speed){
     //initial position
     this->stance();
     //action
-    this->write(LEFT, 70);
+    this->write(RIGHT, rightLeg.read() + rotatingStepSize);
     delay(MAXROTATINGSPEED/ speed);
-    this->write(LEFT, 90);
+    this->write(RIGHT, rightLeg.read() - rotatingStepSize);
 }
 
 void Legs::rotateRight(double speed){
     //initial position
     this->stance();
     //action
-    this->write(RIGHT, 70);
+    this->write(LEFT, leftLeg.read() + rotatingStepSize);
     delay(MAXROTATINGSPEED/ speed);
-    this->write(RIGHT, 90);
+    this->write(LEFT, leftLeg.read() - rotatingStepSize);
 }
 
 void Legs::walkBackwards(double speed){
     //initial position
     this->stance();
     //action
-    this->write(LEFT, 135);
-    delay(MAXBACKWALKINGSPEED / speed);
-    this->write(LEFT, 90);
+    this->write(LEFT, leftLeg.read() - walkingStepSize);
+    delay(MAXWALKINGSPEED / speed);
+    this->write(LEFT, leftLeg.read() + walkingStepSize);
+    this->write(RIGHT, rightLeg.read() - walkingStepSize);
+    delay(MAXWALKINGSPEED / speed);
+    this->write(RIGHT, rightLeg.read() + walkingStepSize);
 }

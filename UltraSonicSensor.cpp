@@ -7,6 +7,8 @@ UltraSonicSensor::UltraSonicSensor(){
 void UltraSonicSensor::initialize(int triggerPin, int echoPin){
    pinMode(triggerPin, OUTPUT);
    pinMode(echoPin, INPUT);
+   this->triggerPin = triggerPin;
+   this->echoPin = echoPin;
 }
 
 int UltraSonicSensor::measureDistance(){
