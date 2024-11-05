@@ -15,10 +15,10 @@
  *ATTACK stance: Inclined to the back and with a lower center of mass. The ideal stance for offensive actions
  *NORMAL stance: With normal degrees and leg position. The ideal stance for walking actions
  **/
-enum Positions{ LEFT, RIGHT, CENTER};
-enum Stances {ATTACK, NORMAL};
+enum Positions{ LEFT, RIGHT, CENTER };
+enum Stances { ATTACK, NORMAL};
 
-class Legs{
+class Legs {
     private:
         Servo leftLeg;
         Servo rightLeg;

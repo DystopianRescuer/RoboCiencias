@@ -14,10 +14,12 @@ const int pinLeftArm = 5;
 Legs legs;
 
 // Representacion simbolica de sensor/es sonico/s
-UltraSonicSensor sensor1;
+UltraSonicSensor sensor;
 
 long duration;
 int distance;
+
+String currentMode = "DEV";
 
 void setup() {
   //Configuraciones iniciales
@@ -29,19 +31,29 @@ void setup() {
 }
 
 void loop() {
-     legs.walk(1);
-//  distance = sensor1.measureDistance();
-  //////////////////////////////////
-  // Serial.print("Distancia: "); //
-  // Serial.print(distance);      //
-  // Serial.print("cm");          //
-  // Serial.println();            //
-  //////////////////////////////////
+  switch(currentMode) {
+      case "DEV":
+          // Legs development
+          legs.walk(1);
 
-  //Acciones
- // if(distance == 0){
-  //}else{
-  //}
+	  // Ultrasonic sensors dev
+	  //  distance = sensor1.measureDistance();
+  	  //////////////////////////////////
+	  // Serial.print("Distancia: "); //
+	  // Serial.print(distance);      //
+	  // Serial.print("cm");          //
+ 	  // Serial.println();            //
+  	  //////////////////////////////////
 
+  	  //Acciones
+	  // if(distance == 0){
+ 	  //}else{
+  	  //}
+          break;
+      case "AUTONOMOUS":
+          break;
+      case "REMOTE":
+          break;
+  }
 
  }
