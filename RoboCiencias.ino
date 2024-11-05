@@ -19,7 +19,7 @@ UltraSonicSensor sensor;
 long duration;
 int distance;
 
-String currentMode = "DEV";
+const String currentMode = "DEV";
 
 void setup() {
   //Configuraciones iniciales
