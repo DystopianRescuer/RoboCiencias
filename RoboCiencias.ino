@@ -19,11 +19,12 @@ UltraSonicSensor sensor;
 long duration;
 int distance;
 
-const String currentMode = "DEV";
+enum Modes{ DEV,AUTONOMOUS,REMOTE };
+const Modes currentMode = DEV;
 
 void setup() {
   //Configuraciones iniciales
-  sensor1.initialize(trigger, echo);
+  sensor.initialize(trigger, echo);
   legs.attach(pinLeftLeg, pinRightLeg);
 
   //Debug
@@ -32,9 +33,9 @@ void setup() {
 
 void loop() {
   switch(currentMode) {
-      case "DEV":
+      case DEV:
           // Legs development
-          legs.walk(1);
+          legs.rotateLeft(1);
 
 	  // Ultrasonic sensors dev
 	  //  distance = sensor1.measureDistance();
@@ -50,9 +51,9 @@ void loop() {
  	  //}else{
   	  //}
           break;
-      case "AUTONOMOUS":
+      case AUTONOMOUS:
           break;
-      case "REMOTE":
+      case REMOTE:
           break;
   }
 

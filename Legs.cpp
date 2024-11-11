@@ -5,10 +5,10 @@
 /**
  * Maximum safer speeds for the robot movements. This are intended as a safeguard so we can't move the robot faster than it is stable
  * to move.
- * TO BE CALIBRATED
+ * Front walking is calibrated
  */
 double static const MAXWALKINGSPEED = 100;
-double static const MAXROTATINGSPEED = 100;
+double static const MAXROTATINGSPEED = 200;
 double static const MAXBACKWALKINGSPEED = 100;
 
 /**
@@ -20,10 +20,10 @@ int static const NORMALANGLE = 50;
 
 /**
  * Standard "step" values for macro actions. This is the size in degrees that'll be taken in each macro action for servo movements.
- * TO BE CALIBRATED
+ * Walking is calibrated.
  */
 int static const walkingStepSize = 35;
-int static const rotatingStepSize = 35;
+int static const rotatingStepSize = 45;
 
 Legs::Legs(){
 }
@@ -95,6 +95,7 @@ void Legs::rotateLeft(double speed){
     if(speed > 1) return;
     //initial position
     this->stance();
+    delay(MAXROTATINGSPEED / speed);
     //action
     this->write(RIGHT, rightLeg.read() + rotatingStepSize);
     delay(MAXROTATINGSPEED/ speed);
@@ -105,6 +106,7 @@ void Legs::rotateRight(double speed){
     if(speed > 1) return;
     //initial position
     this->stance();
+    delay(MAXROTATINGSPEED/ speed);
     //action
     this->write(LEFT, leftLeg.read() + rotatingStepSize);
     delay(MAXROTATINGSPEED/ speed);
@@ -115,6 +117,7 @@ void Legs::walkBackwards(double speed){
     if(speed > 1) return;
     //initial position
     this->stance();
+    delay(MAXWALKINGSPEED / speed);
     //action
     this->write(LEFT, leftLeg.read() - walkingStepSize);
     delay(MAXWALKINGSPEED / speed);
