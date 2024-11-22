@@ -53,9 +53,11 @@ void loop() {
  	  //}else{
   	  //}
           break;
+
       //For autonomous mode. We need a fancy algorithm
       case AUTONOMOUS:
           break;
+
       //Remote mode, establish connections with bluetooth master
       case REMOTE:
           break;
