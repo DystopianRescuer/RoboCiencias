@@ -37,7 +37,7 @@ void loop() {
       //For development
       case DEV:
           // Legs development
-          legs.rotateLeft(1);
+          legs.rotateRight(0.25);
 
 	  // Ultrasonic sensors dev
 	  //  distance = sensor1.measureDistance();
