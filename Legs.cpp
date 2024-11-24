@@ -23,7 +23,7 @@ int static const NORMALANGLE = 50;
  * Walking is calibrated.
  */
 int static const walkingStepSize = 35;
-int static const rotatingStepSize = 45;
+int static const rotatingStepSize = 35;
 
 Legs::Legs(){
 }
@@ -42,6 +42,17 @@ void Legs::write(Positions p, int deg){
             break;
     }
 }
+
+int Legs::read(Positions p){
+    switch(p){
+        case LEFT: return 180-leftLeg.read();
+        case RIGHT: return rightLeg.read();
+        case CENTER:
+            if(&centerLeg != &rightLeg)
+                return centerLeg.read();
+    }
+}
+
 void Legs::stance(Stances stance){
    this->currentStance = stance;
    this->stance();
@@ -96,21 +107,19 @@ void Legs::rotateLeft(double speed){
     //initial position
     this->stance();
     delay(MAXROTATINGSPEED / speed);
-    //action
-    this->write(RIGHT, rightLeg.read() + rotatingStepSize);
-    delay(MAXROTATINGSPEED/ speed);
-    this->write(RIGHT, rightLeg.read() - rotatingStepSize);
+    this->write(RIGHT, this->read(RIGHT) + rotatingStepSize);
+    delay(MAXROTATINGSPEED / speed);
+    this->write(RIGHT, this->read(RIGHT) - rotatingStepSize);
 }
 
 void Legs::rotateRight(double speed){
     if(speed > 1) return;
     //initial position
     this->stance();
-    delay(MAXROTATINGSPEED/ speed);
-    //action
-    this->write(LEFT, leftLeg.read() + rotatingStepSize);
-    delay(MAXROTATINGSPEED/ speed);
-    this->write(LEFT, leftLeg.read() - rotatingStepSize);
+    delay(MAXROTATINGSPEED / speed);
+    this->write(LEFT, this->read(LEFT) + rotatingStepSize);
+    delay(MAXROTATINGSPEED / speed);
+    this->write(LEFT, this->read(LEFT) - rotatingStepSize);
 }
 
 void Legs::walkBackwards(double speed){

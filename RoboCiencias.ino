@@ -19,6 +19,7 @@ UltraSonicSensor sensor;
 long duration;
 int distance;
 
+//Robot mode selection
 enum Modes{ DEV,AUTONOMOUS,REMOTE };
 const Modes currentMode = DEV;
 
@@ -33,9 +34,10 @@ void setup() {
 
 void loop() {
   switch(currentMode) {
+      //For development
       case DEV:
           // Legs development
-          legs.rotateLeft(1);
+          legs.rotateRight(0.25);
 
 	  // Ultrasonic sensors dev
 	  //  distance = sensor1.measureDistance();
@@ -51,8 +53,12 @@ void loop() {
  	  //}else{
   	  //}
           break;
+
+      //For autonomous mode. We need a fancy algorithm
       case AUTONOMOUS:
           break;
+
+      //Remote mode, establish connections with bluetooth master
       case REMOTE:
           break;
   }

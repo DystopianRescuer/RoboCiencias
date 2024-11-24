@@ -104,6 +104,15 @@ class Legs {
          * @param deg The degree we want to write
          */
         void write(Positions p, int deg);
+        /**
+         * @brief Wrapper method for Servo.read
+         *
+         * Returns the unified degree system value for
+         * the position specified.
+         *
+         * @param p The side we want to read
+         */
+        int read(Positions p);
 };
 
 
