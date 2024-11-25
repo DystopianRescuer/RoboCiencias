@@ -1,6 +1,7 @@
 #ifndef BUZZER_H_
 #define BUZZER_H_
 
+#include <unordered_map>
 
 /**
  * @brief Note enumeration
@@ -64,7 +65,7 @@ class Buzzer{
         /**
          * @brief Map for length durations
          */
-        std::unordered_map<Lengths, int> lengthDurations;
+        static const std::unordered_map<Lengths, double> lengthDurations;
 
     public:
         /**
