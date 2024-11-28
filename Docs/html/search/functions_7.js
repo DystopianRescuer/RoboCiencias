@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['walk_52',['walk',['../classLegs.html#a14d4fcd9e3028919366c31a5da0dfb43',1,'Legs']]],
-  ['walkbackwards_53',['walkBackwards',['../classLegs.html#a811c9c05ac466859c35bbd4b47f653e3',1,'Legs']]],
-  ['write_54',['write',['../classLegs.html#a8165b3a3f8c4a5b713ab7572782f470e',1,'Legs']]]
+  ['punch_164',['punch',['../classArms.html#ac85ea3572e854478d515e968c6238fa7',1,'Arms::punch()'],['../Arms_8cpp.html#a4bca08e0a1c17154fb26d29b8a8fbf04',1,'punch():&#160;Arms.cpp']]]
 ];

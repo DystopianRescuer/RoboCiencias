@@ -1,0 +1,82 @@
+\hypertarget{classBuzzer}{}\doxysection{Buzzer Class Reference}
+\label{classBuzzer}\index{Buzzer@{Buzzer}}
+
+
+Class for easier handling of the buzzer.  
+
+
+
+
+{\ttfamily \#include $<$Buzzer.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBuzzer_ad2eeb575abdff48756fc298b448bfc8b}{attach}} (int buzzer\+Pin, int tempo)
+\begin{DoxyCompactList}\small\item\em Initializer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBuzzer_aa43175b198cb8353990cc23ea20bcf1f}{note}} (\mbox{\hyperlink{Buzzer_8h_aedd0e9a452d56b275097c91bed3a8112}{Notes}} note, \mbox{\hyperlink{Buzzer_8h_aa6d0e7b172b9f99b52eb36979c048112}{Lengths}} length)
+\begin{DoxyCompactList}\small\item\em Send a note to the buzzer to be played. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBuzzer_aa676293f71094d5b08f4aa9221da167d}{set\+Tempo}} (int tempo)
+\item 
+int \mbox{\hyperlink{classBuzzer_addb1606872fd944d48e0bf42c992d3e1}{get\+Tempo}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for easier handling of the buzzer. 
+
+It has all the methods and definitions necessary for only sending tones to the buzzer from another classes, without worrying for other stuff. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBuzzer_ad2eeb575abdff48756fc298b448bfc8b}\label{classBuzzer_ad2eeb575abdff48756fc298b448bfc8b}} 
+\index{Buzzer@{Buzzer}!attach@{attach}}
+\index{attach@{attach}!Buzzer@{Buzzer}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}}
+{\footnotesize\ttfamily void Buzzer\+::attach (\begin{DoxyParamCaption}\item[{int}]{buzzer\+Pin,  }\item[{int}]{tempo }\end{DoxyParamCaption})}
+
+
+
+Initializer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buzzer\+Pin} & pin of the buzzer \\
+\hline
+{\em tempo} & value for the generation of the lengths \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBuzzer_addb1606872fd944d48e0bf42c992d3e1}\label{classBuzzer_addb1606872fd944d48e0bf42c992d3e1}} 
+\index{Buzzer@{Buzzer}!getTempo@{getTempo}}
+\index{getTempo@{getTempo}!Buzzer@{Buzzer}}
+\doxysubsubsection{\texorpdfstring{getTempo()}{getTempo()}}
+{\footnotesize\ttfamily int Buzzer\+::get\+Tempo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classBuzzer_aa43175b198cb8353990cc23ea20bcf1f}\label{classBuzzer_aa43175b198cb8353990cc23ea20bcf1f}} 
+\index{Buzzer@{Buzzer}!note@{note}}
+\index{note@{note}!Buzzer@{Buzzer}}
+\doxysubsubsection{\texorpdfstring{note()}{note()}}
+{\footnotesize\ttfamily void Buzzer\+::note (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Buzzer_8h_aedd0e9a452d56b275097c91bed3a8112}{Notes}}}]{note,  }\item[{\mbox{\hyperlink{Buzzer_8h_aa6d0e7b172b9f99b52eb36979c048112}{Lengths}}}]{length }\end{DoxyParamCaption})}
+
+
+
+Send a note to the buzzer to be played. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em note} & Note to be played \\
+\hline
+{\em length} & Length of the note \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBuzzer_aa676293f71094d5b08f4aa9221da167d}\label{classBuzzer_aa676293f71094d5b08f4aa9221da167d}} 
+\index{Buzzer@{Buzzer}!setTempo@{setTempo}}
+\index{setTempo@{setTempo}!Buzzer@{Buzzer}}
+\doxysubsubsection{\texorpdfstring{setTempo()}{setTempo()}}
+{\footnotesize\ttfamily void Buzzer\+::set\+Tempo (\begin{DoxyParamCaption}\item[{int}]{tempo }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/mrtaichi/\+Documents/\+Codigos/\+Seminario\+Robotica/\+Robo\+Ciencias/\mbox{\hyperlink{Buzzer_8h}{Buzzer.\+h}}\item 
+/home/mrtaichi/\+Documents/\+Codigos/\+Seminario\+Robotica/\+Robo\+Ciencias/\mbox{\hyperlink{Buzzer_8cpp}{Buzzer.\+cpp}}\end{DoxyCompactItemize}

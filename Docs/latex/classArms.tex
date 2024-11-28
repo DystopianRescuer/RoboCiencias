@@ -1,0 +1,90 @@
+\hypertarget{classArms}{}\doxysection{Arms Class Reference}
+\label{classArms}\index{Arms@{Arms}}
+
+
+{\ttfamily \#include $<$Arms.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classArms_abe37bfe7f4720922f3ad39e279fd5a61}{Arms}} ()
+\item 
+void \mbox{\hyperlink{classArms_aa8e5a0abdd215d48b6ae61e1f6a77b61}{attach}} (int l\+Arm, int r\+Arm)
+\begin{DoxyCompactList}\small\item\em Initializer of arms class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArms_ac85ea3572e854478d515e968c6238fa7}{punch}} (double speed)
+\begin{DoxyCompactList}\small\item\em Macro action for act as Stance intention. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArms_a11233f877a69f11ec292d5e32a5a41de}{write}} (\mbox{\hyperlink{Arms_8h_adb1fad3b6a121acd6db0b9eda7fd5111}{Positions}} p, int deg)
+\begin{DoxyCompactList}\small\item\em Wrapper method for Servo.\+write. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classArms_abe37bfe7f4720922f3ad39e279fd5a61}\label{classArms_abe37bfe7f4720922f3ad39e279fd5a61}} 
+\index{Arms@{Arms}!Arms@{Arms}}
+\index{Arms@{Arms}!Arms@{Arms}}
+\doxysubsubsection{\texorpdfstring{Arms()}{Arms()}}
+{\footnotesize\ttfamily Arms\+::\+Arms (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classArms_aa8e5a0abdd215d48b6ae61e1f6a77b61}\label{classArms_aa8e5a0abdd215d48b6ae61e1f6a77b61}} 
+\index{Arms@{Arms}!attach@{attach}}
+\index{attach@{attach}!Arms@{Arms}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}}
+{\footnotesize\ttfamily void Arms\+::attach (\begin{DoxyParamCaption}\item[{int}]{l\+Arm,  }\item[{int}]{r\+Arm }\end{DoxyParamCaption})}
+
+
+
+Initializer of arms class. 
+
+It attaches the corresponding pins to Servo objects
+
+
+\begin{DoxyParams}{Parameters}
+{\em l\+Arm} & pin of the Left Arm \\
+\hline
+{\em r\+Arm} & pin of the Right Arm \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classArms_ac85ea3572e854478d515e968c6238fa7}\label{classArms_ac85ea3572e854478d515e968c6238fa7}} 
+\index{Arms@{Arms}!punch@{punch}}
+\index{punch@{punch}!Arms@{Arms}}
+\doxysubsubsection{\texorpdfstring{punch()}{punch()}}
+{\footnotesize\ttfamily void Arms\+::punch (\begin{DoxyParamCaption}\item[{double}]{speed }\end{DoxyParamCaption})}
+
+
+
+Macro action for act as Stance intention. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & A double value used for the percentage of speed we want to use for the action. It should be bounded to \mbox{[}0,1\mbox{]} with 1 being the maximum stable speed for the intended action. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classArms_a11233f877a69f11ec292d5e32a5a41de}\label{classArms_a11233f877a69f11ec292d5e32a5a41de}} 
+\index{Arms@{Arms}!write@{write}}
+\index{write@{write}!Arms@{Arms}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void Arms\+::write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Arms_8h_adb1fad3b6a121acd6db0b9eda7fd5111}{Positions}}}]{p,  }\item[{int}]{deg }\end{DoxyParamCaption})}
+
+
+
+Wrapper method for Servo.\+write. 
+
+It uses a unified degree system for both sides of the robot so we could set n degrees to both sides and keep the robot arms in the same position (as a mirror)
+
+A priori this shouldn\textquotesingle{}t be used frequently. It is only included as a manual way for setting the degrees in the servos but all the other methods should suffice for the intended motive of this class.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The side we want to write \\
+\hline
+{\em deg} & The degree we want to write \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/mrtaichi/\+Documents/\+Codigos/\+Seminario\+Robotica/\+Robo\+Ciencias/\mbox{\hyperlink{Arms_8h}{Arms.\+h}}\item 
+/home/mrtaichi/\+Documents/\+Codigos/\+Seminario\+Robotica/\+Robo\+Ciencias/\mbox{\hyperlink{Arms_8cpp}{Arms.\+cpp}}\end{DoxyCompactItemize}
