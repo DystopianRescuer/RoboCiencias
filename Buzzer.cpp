@@ -1,4 +1,5 @@
 #include "Buzzer.h"
+#include<Arduino.h>
 
 Buzzer::Buzzer(){}
 
@@ -62,6 +63,9 @@ int Buzzer::getTempo(){
     return this->tempo;
 }
 
-void note(Notes note, Lengths length){
-
+void Buzzer::note(Notes note, Lengths length){
+    tone(this->buzzerPin, getNoteFrequency(note), getLength(length));
+    delay(getLength(length));
+    noTone(this->buzzerPin);
+    delay(getLength(length));
 }
