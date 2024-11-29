@@ -9,9 +9,18 @@ const int pinRightLeg = 2;
 const int pinLeftLeg = 3;
 const int pinRightArm = 4;
 const int pinLeftArm = 5;
+// TBD
+const int buzzerPin = 8;
 
 // Representaciones simbolicas de Servos
 Legs legs;
+
+// Arms servos wrapper
+Arms arms;
+
+// Dancer is basically where all dancing logic lives
+Dancer dancer;
+Buzzer buzzer;
 
 // Representacion simbolica de sensor/es sonico/s
 UltraSonicSensor sensor;
@@ -27,8 +36,10 @@ void setup() {
   //Configuraciones iniciales
   sensor.initialize(trigger, echo);
   legs.attach(pinLeftLeg, pinRightLeg);
+  buzzer.attach(buzzerPin);
+  dancer.attach(legs, arms, buzzer);
 
-  //Debug
+  // for debugging
   Serial.begin(9600);
 }
 
@@ -52,7 +63,7 @@ void loop() {
 	  // if(distance == 0){
  	  //}else{
   	  //}
-          break;
+      break;
 
       //For autonomous mode. We need a fancy algorithm
       case AUTONOMOUS:

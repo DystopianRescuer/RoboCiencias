@@ -11,8 +11,7 @@ enum Positions{ LEFT, RIGHT };
 
 class Arms {
     private:
-        Servo leftArm;
-        Servo rightArm;
+        Servo leftArm, rightArm;
         Stances currentStance;
     public:
         Arms();
