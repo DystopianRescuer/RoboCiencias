@@ -2,11 +2,11 @@
 #define LEGS_H_
 
 #include <Servo.h>
-
+#include  "Buzzer.cpp"
 
 /**
  * @brief Class used to bring together the arms and legs reference to use em'
- * with a buzzer to make dance movements
+ * with a buzzer to make dance movements and play music
  *
  **/
 
@@ -16,14 +16,14 @@ class Dancer {
     private:
 	Legs legs;
 	Arms arms;
-	// Buzzer
+	Buzzer buzzer;
     public:
 	Dancer();
 
-	/*
-	 * 
-	*/
-	void attach(Legs legs, Arms arms, /* Buzzer */);
+	void attach(Legs legs, Arms arms, Buzzer buzzer);
 
 	void dance(Dance dance);
 }
+
+
+#endif LEGS_H_
