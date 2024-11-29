@@ -25,8 +25,10 @@ void \mbox{\hyperlink{classLegs_ac34784c0ab78823b672baf3e2daa6c32}{stance}} (\mb
 \begin{DoxyCompactList}\small\item\em For setting the stance of the legs. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classLegs_a379500d804200ba0ff2c5e01cfc7f266}{stance}} ()
 \begin{DoxyCompactList}\small\item\em For getting the legs at stance. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classLegs_a8165b3a3f8c4a5b713ab7572782f470e}{write}} (\mbox{\hyperlink{Legs_8h_adb1fad3b6a121acd6db0b9eda7fd5111}{Positions}} p, int deg)
-\begin{DoxyCompactList}\small\item\em Wrapper method for Servo.\+write. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classLegs_a8165b3a3f8c4a5b713ab7572782f470e}{write}} (\mbox{\hyperlink{Arms_8h_adb1fad3b6a121acd6db0b9eda7fd5111}{Positions}} p, int deg)
+\begin{DoxyCompactList}\small\item\em Wrapper method for Servo.\+write. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classLegs_aacf1e18abac3f4544bc969b6e751f4c4}{read}} (\mbox{\hyperlink{Arms_8h_adb1fad3b6a121acd6db0b9eda7fd5111}{Positions}} p)
+\begin{DoxyCompactList}\small\item\em Wrapper method for Servo.\+read. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -77,6 +79,23 @@ Attaches the corresponding pins to the Servo objects.
 {\em r\+Leg} & pin of the Right Leg \\
 \hline
 {\em c\+Leg} & pin of the Center Leg \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLegs_aacf1e18abac3f4544bc969b6e751f4c4}\label{classLegs_aacf1e18abac3f4544bc969b6e751f4c4}} 
+\index{Legs@{Legs}!read@{read}}
+\index{read@{read}!Legs@{Legs}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily int Legs\+::read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Arms_8h_adb1fad3b6a121acd6db0b9eda7fd5111}{Positions}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Wrapper method for Servo.\+read. 
+
+Returns the unified degree system value for the position specified.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The side we want to read \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classLegs_a97ace22134a509b30af4c7a171bc7432}\label{classLegs_a97ace22134a509b30af4c7a171bc7432}} 
@@ -170,7 +189,7 @@ Macro action for walk backwards rotation.
 \index{Legs@{Legs}!write@{write}}
 \index{write@{write}!Legs@{Legs}}
 \doxysubsubsection{\texorpdfstring{write()}{write()}}
-{\footnotesize\ttfamily void Legs\+::write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Legs_8h_adb1fad3b6a121acd6db0b9eda7fd5111}{Positions}}}]{p,  }\item[{int}]{deg }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Legs\+::write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Arms_8h_adb1fad3b6a121acd6db0b9eda7fd5111}{Positions}}}]{p,  }\item[{int}]{deg }\end{DoxyParamCaption})}
 
 
 
@@ -192,4 +211,5 @@ A priori this shouldn\textquotesingle{}t be used frequently. It is only included
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 /home/mrtaichi/\+Documents/\+Codigos/\+Seminario\+Robotica/\+Robo\+Ciencias/\mbox{\hyperlink{Legs_8h}{Legs.\+h}}\item 
+/home/mrtaichi/\+Documents/\+Codigos/\+Seminario\+Robotica/\+Robo\+Ciencias/\mbox{\hyperlink{Arms_8cpp}{Arms.\+cpp}}\item 
 /home/mrtaichi/\+Documents/\+Codigos/\+Seminario\+Robotica/\+Robo\+Ciencias/\mbox{\hyperlink{Legs_8cpp}{Legs.\+cpp}}\end{DoxyCompactItemize}

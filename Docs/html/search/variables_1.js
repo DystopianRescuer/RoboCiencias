@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['echo_57',['echo',['../RoboCiencias_8ino.html#a7e8290cb798f36f6134f6d6ee7e67f77',1,'RoboCiencias.ino']]]
+  ['currentmode_176',['currentMode',['../RoboCiencias_8ino.html#a6dc7759d4e59808986761286700c0b5c',1,'RoboCiencias.ino']]]
 ];

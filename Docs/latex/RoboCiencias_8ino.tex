@@ -10,6 +10,14 @@ Include dependency graph for Robo\+Ciencias.\+ino\+:\nopagebreak
 \includegraphics[width=287pt]{RoboCiencias_8ino__incl}
 \end{center}
 \end{figure}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{RoboCiencias_8ino_a5ba261125d0e6e60801792a10232cc09}{Modes}} \{ \mbox{\hyperlink{RoboCiencias_8ino_a5ba261125d0e6e60801792a10232cc09aab9bcf71b8a61e1a8c59d2e71a3eaad6}{DEV}}
+, \mbox{\hyperlink{RoboCiencias_8ino_a5ba261125d0e6e60801792a10232cc09a15984d1e548813ca0e54895a2322b54b}{AUTONOMOUS}}
+, \mbox{\hyperlink{RoboCiencias_8ino_a5ba261125d0e6e60801792a10232cc09a4ba7a18dad4c2b80d41444425fc4b818}{REMOTE}}
+ \}
+\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -24,9 +32,9 @@ const int \mbox{\hyperlink{RoboCiencias_8ino_a082219a1fb59ff9182293666b6c0b63e}{
 \item 
 const int \mbox{\hyperlink{RoboCiencias_8ino_a7e8290cb798f36f6134f6d6ee7e67f77}{echo}} = 6
 \item 
-const int \mbox{\hyperlink{RoboCiencias_8ino_ab1b6b012fa6e11036605333bd1b4bc67}{pin\+Right\+Leg}} = 3
+const int \mbox{\hyperlink{RoboCiencias_8ino_ab1b6b012fa6e11036605333bd1b4bc67}{pin\+Right\+Leg}} = 2
 \item 
-const int \mbox{\hyperlink{RoboCiencias_8ino_a436b39af6bd2c7fd74c47e1314964429}{pin\+Left\+Leg}} = 2
+const int \mbox{\hyperlink{RoboCiencias_8ino_a436b39af6bd2c7fd74c47e1314964429}{pin\+Left\+Leg}} = 3
 \item 
 const int \mbox{\hyperlink{RoboCiencias_8ino_a66160c0bd2d6cade31c88f4964d473ad}{pin\+Right\+Arm}} = 4
 \item 
@@ -34,12 +42,37 @@ const int \mbox{\hyperlink{RoboCiencias_8ino_a43788d903bc251653f0df01e657538fe}{
 \item 
 \mbox{\hyperlink{classLegs}{Legs}} \mbox{\hyperlink{RoboCiencias_8ino_a9739c9b7043aaa8a2e7e2ecabb93c38a}{legs}}
 \item 
-\mbox{\hyperlink{classUltraSonicSensor}{Ultra\+Sonic\+Sensor}} \mbox{\hyperlink{RoboCiencias_8ino_a4addddd94287df9687edbbf9efb14297}{sensor1}}
+\mbox{\hyperlink{classUltraSonicSensor}{Ultra\+Sonic\+Sensor}} \mbox{\hyperlink{RoboCiencias_8ino_a864473c7120cf95dbdec753beb700dd1}{sensor}}
 \item 
 long \mbox{\hyperlink{RoboCiencias_8ino_a49411c0db3bc12e9d548e069021b0645}{duration}}
 \item 
 int \mbox{\hyperlink{RoboCiencias_8ino_afb9412686cd344ad61757c1c19ba8a87}{distance}}
+\item 
+const \mbox{\hyperlink{RoboCiencias_8ino_a5ba261125d0e6e60801792a10232cc09}{Modes}} \mbox{\hyperlink{RoboCiencias_8ino_a6dc7759d4e59808986761286700c0b5c}{current\+Mode}} = \mbox{\hyperlink{RoboCiencias_8ino_a5ba261125d0e6e60801792a10232cc09aab9bcf71b8a61e1a8c59d2e71a3eaad6}{DEV}}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{RoboCiencias_8ino_a5ba261125d0e6e60801792a10232cc09}\label{RoboCiencias_8ino_a5ba261125d0e6e60801792a10232cc09}} 
+\index{RoboCiencias.ino@{RoboCiencias.ino}!Modes@{Modes}}
+\index{Modes@{Modes}!RoboCiencias.ino@{RoboCiencias.ino}}
+\doxysubsubsection{\texorpdfstring{Modes}{Modes}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{RoboCiencias_8ino_a5ba261125d0e6e60801792a10232cc09}{Modes}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEV@{DEV}!RoboCiencias.ino@{RoboCiencias.ino}}\index{RoboCiencias.ino@{RoboCiencias.ino}!DEV@{DEV}}}\mbox{\Hypertarget{RoboCiencias_8ino_a5ba261125d0e6e60801792a10232cc09aab9bcf71b8a61e1a8c59d2e71a3eaad6}\label{RoboCiencias_8ino_a5ba261125d0e6e60801792a10232cc09aab9bcf71b8a61e1a8c59d2e71a3eaad6}} 
+DEV&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AUTONOMOUS@{AUTONOMOUS}!RoboCiencias.ino@{RoboCiencias.ino}}\index{RoboCiencias.ino@{RoboCiencias.ino}!AUTONOMOUS@{AUTONOMOUS}}}\mbox{\Hypertarget{RoboCiencias_8ino_a5ba261125d0e6e60801792a10232cc09a15984d1e548813ca0e54895a2322b54b}\label{RoboCiencias_8ino_a5ba261125d0e6e60801792a10232cc09a15984d1e548813ca0e54895a2322b54b}} 
+AUTONOMOUS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{REMOTE@{REMOTE}!RoboCiencias.ino@{RoboCiencias.ino}}\index{RoboCiencias.ino@{RoboCiencias.ino}!REMOTE@{REMOTE}}}\mbox{\Hypertarget{RoboCiencias_8ino_a5ba261125d0e6e60801792a10232cc09a4ba7a18dad4c2b80d41444425fc4b818}\label{RoboCiencias_8ino_a5ba261125d0e6e60801792a10232cc09a4ba7a18dad4c2b80d41444425fc4b818}} 
+REMOTE&\\
+\hline
+
+\end{DoxyEnumFields}
 
 
 \doxysubsection{Function Documentation}
@@ -58,6 +91,12 @@ int \mbox{\hyperlink{RoboCiencias_8ino_afb9412686cd344ad61757c1c19ba8a87}{distan
 
 
 \doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{RoboCiencias_8ino_a6dc7759d4e59808986761286700c0b5c}\label{RoboCiencias_8ino_a6dc7759d4e59808986761286700c0b5c}} 
+\index{RoboCiencias.ino@{RoboCiencias.ino}!currentMode@{currentMode}}
+\index{currentMode@{currentMode}!RoboCiencias.ino@{RoboCiencias.ino}}
+\doxysubsubsection{\texorpdfstring{currentMode}{currentMode}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{RoboCiencias_8ino_a5ba261125d0e6e60801792a10232cc09}{Modes}} current\+Mode = \mbox{\hyperlink{RoboCiencias_8ino_a5ba261125d0e6e60801792a10232cc09aab9bcf71b8a61e1a8c59d2e71a3eaad6}{DEV}}}
+
 \mbox{\Hypertarget{RoboCiencias_8ino_afb9412686cd344ad61757c1c19ba8a87}\label{RoboCiencias_8ino_afb9412686cd344ad61757c1c19ba8a87}} 
 \index{RoboCiencias.ino@{RoboCiencias.ino}!distance@{distance}}
 \index{distance@{distance}!RoboCiencias.ino@{RoboCiencias.ino}}
@@ -92,7 +131,7 @@ int \mbox{\hyperlink{RoboCiencias_8ino_afb9412686cd344ad61757c1c19ba8a87}{distan
 \index{RoboCiencias.ino@{RoboCiencias.ino}!pinLeftLeg@{pinLeftLeg}}
 \index{pinLeftLeg@{pinLeftLeg}!RoboCiencias.ino@{RoboCiencias.ino}}
 \doxysubsubsection{\texorpdfstring{pinLeftLeg}{pinLeftLeg}}
-{\footnotesize\ttfamily const int pin\+Left\+Leg = 2}
+{\footnotesize\ttfamily const int pin\+Left\+Leg = 3}
 
 \mbox{\Hypertarget{RoboCiencias_8ino_a66160c0bd2d6cade31c88f4964d473ad}\label{RoboCiencias_8ino_a66160c0bd2d6cade31c88f4964d473ad}} 
 \index{RoboCiencias.ino@{RoboCiencias.ino}!pinRightArm@{pinRightArm}}
@@ -104,13 +143,13 @@ int \mbox{\hyperlink{RoboCiencias_8ino_afb9412686cd344ad61757c1c19ba8a87}{distan
 \index{RoboCiencias.ino@{RoboCiencias.ino}!pinRightLeg@{pinRightLeg}}
 \index{pinRightLeg@{pinRightLeg}!RoboCiencias.ino@{RoboCiencias.ino}}
 \doxysubsubsection{\texorpdfstring{pinRightLeg}{pinRightLeg}}
-{\footnotesize\ttfamily const int pin\+Right\+Leg = 3}
+{\footnotesize\ttfamily const int pin\+Right\+Leg = 2}
 
-\mbox{\Hypertarget{RoboCiencias_8ino_a4addddd94287df9687edbbf9efb14297}\label{RoboCiencias_8ino_a4addddd94287df9687edbbf9efb14297}} 
-\index{RoboCiencias.ino@{RoboCiencias.ino}!sensor1@{sensor1}}
-\index{sensor1@{sensor1}!RoboCiencias.ino@{RoboCiencias.ino}}
-\doxysubsubsection{\texorpdfstring{sensor1}{sensor1}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classUltraSonicSensor}{Ultra\+Sonic\+Sensor}} sensor1}
+\mbox{\Hypertarget{RoboCiencias_8ino_a864473c7120cf95dbdec753beb700dd1}\label{RoboCiencias_8ino_a864473c7120cf95dbdec753beb700dd1}} 
+\index{RoboCiencias.ino@{RoboCiencias.ino}!sensor@{sensor}}
+\index{sensor@{sensor}!RoboCiencias.ino@{RoboCiencias.ino}}
+\doxysubsubsection{\texorpdfstring{sensor}{sensor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUltraSonicSensor}{Ultra\+Sonic\+Sensor}} sensor}
 
 \mbox{\Hypertarget{RoboCiencias_8ino_a082219a1fb59ff9182293666b6c0b63e}\label{RoboCiencias_8ino_a082219a1fb59ff9182293666b6c0b63e}} 
 \index{RoboCiencias.ino@{RoboCiencias.ino}!trigger@{trigger}}

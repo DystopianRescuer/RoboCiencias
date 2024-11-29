@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['measuredistance_46',['measureDistance',['../classUltraSonicSensor.html#a67442992e5b5e124dd250d587a18f03c',1,'UltraSonicSensor']]]
+  ['initialize_159',['initialize',['../classUltraSonicSensor.html#ad871c185a1c18cd23e56a7e6f603b742',1,'UltraSonicSensor']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['normal_14',['NORMAL',['../Legs_8h.html#ac52d397775aec16ec2a838f2a8aff4afa50d1448013c6f17125caee18aa418af7',1,'Legs.h']]]
+  ['initialize_99',['initialize',['../classUltraSonicSensor.html#ad871c185a1c18cd23e56a7e6f603b742',1,'UltraSonicSensor']]]
 ];

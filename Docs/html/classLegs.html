@@ -99,9 +99,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a379500d804200ba0ff2c5e01cfc7f266"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLegs.html#a379500d804200ba0ff2c5e01cfc7f266">stance</a> ()</td></tr>
 <tr class="memdesc:a379500d804200ba0ff2c5e01cfc7f266"><td class="mdescLeft">&#160;</td><td class="mdescRight">For getting the legs at stance.  <a href="classLegs.html#a379500d804200ba0ff2c5e01cfc7f266">More...</a><br /></td></tr>
 <tr class="separator:a379500d804200ba0ff2c5e01cfc7f266"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8165b3a3f8c4a5b713ab7572782f470e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLegs.html#a8165b3a3f8c4a5b713ab7572782f470e">write</a> (<a class="el" href="Legs_8h.html#adb1fad3b6a121acd6db0b9eda7fd5111">Positions</a> p, int deg)</td></tr>
+<tr class="memitem:a8165b3a3f8c4a5b713ab7572782f470e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLegs.html#a8165b3a3f8c4a5b713ab7572782f470e">write</a> (<a class="el" href="Arms_8h.html#adb1fad3b6a121acd6db0b9eda7fd5111">Positions</a> p, int deg)</td></tr>
 <tr class="memdesc:a8165b3a3f8c4a5b713ab7572782f470e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper method for Servo.write.  <a href="classLegs.html#a8165b3a3f8c4a5b713ab7572782f470e">More...</a><br /></td></tr>
 <tr class="separator:a8165b3a3f8c4a5b713ab7572782f470e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacf1e18abac3f4544bc969b6e751f4c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLegs.html#aacf1e18abac3f4544bc969b6e751f4c4">read</a> (<a class="el" href="Arms_8h.html#adb1fad3b6a121acd6db0b9eda7fd5111">Positions</a> p)</td></tr>
+<tr class="memdesc:aacf1e18abac3f4544bc969b6e751f4c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper method for Servo.read.  <a href="classLegs.html#aacf1e18abac3f4544bc969b6e751f4c4">More...</a><br /></td></tr>
+<tr class="separator:aacf1e18abac3f4544bc969b6e751f4c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a375b56dae63069e0cc8c1ea658fb83e6"></a>
@@ -199,6 +202,33 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">lLeg</td><td>pin of the Left Leg </td></tr>
     <tr><td class="paramname">rLeg</td><td>pin of the Right Leg </td></tr>
     <tr><td class="paramname">cLeg</td><td>pin of the Center Leg </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aacf1e18abac3f4544bc969b6e751f4c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacf1e18abac3f4544bc969b6e751f4c4">&#9670;&nbsp;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Legs::read </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="Arms_8h.html#adb1fad3b6a121acd6db0b9eda7fd5111">Positions</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wrapper method for Servo.read. </p>
+<p>Returns the unified degree system value for the position specified.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>The side we want to read </td></tr>
   </table>
   </dd>
 </dl>
@@ -365,7 +395,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Legs::write </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="Legs_8h.html#adb1fad3b6a121acd6db0b9eda7fd5111">Positions</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="Arms_8h.html#adb1fad3b6a121acd6db0b9eda7fd5111">Positions</a>&#160;</td>
           <td class="paramname"><em>p</em>, </td>
         </tr>
         <tr>
@@ -397,6 +427,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/mrtaichi/Documents/Codigos/SeminarioRobotica/RoboCiencias/<a class="el" href="Legs_8h_source.html">Legs.h</a></li>
+<li>/home/mrtaichi/Documents/Codigos/SeminarioRobotica/RoboCiencias/<a class="el" href="Arms_8cpp.html">Arms.cpp</a></li>
 <li>/home/mrtaichi/Documents/Codigos/SeminarioRobotica/RoboCiencias/<a class="el" href="Legs_8cpp.html">Legs.cpp</a></li>
 </ul>
 </div><!-- contents -->
