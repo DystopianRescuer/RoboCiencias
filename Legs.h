@@ -15,7 +15,7 @@
  *ATTACK stance: Inclined to the back and with a lower center of mass. The ideal stance for offensive actions
  *NORMAL stance: With normal degrees and leg position. The ideal stance for walking actions
  **/
-enum Positions{ LEFT, RIGHT, CENTER };
+enum LegsPositions{ LEGLEFT, LEGRIGHT, LEGCENTER };
 enum Stances { ATTACK, NORMAL};
 
 class Legs {
@@ -103,7 +103,7 @@ class Legs {
          * @param p The side we want to write
          * @param deg The degree we want to write
          */
-        void write(Positions p, int deg);
+        void write(LegsPositions p, int deg);
         /**
          * @brief Wrapper method for Servo.read
          *
@@ -112,7 +112,7 @@ class Legs {
          *
          * @param p The side we want to read
          */
-        int read(Positions p);
+        int read(LegsPositions p);
 };
 
 

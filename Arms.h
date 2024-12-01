@@ -7,12 +7,11 @@
  * This is way simplier than Legs because the way we use arms are simplier by itself
  * We just need to punch and let other places in the program use write to do stuff like dancing
  **/
-enum Positions{ LEFT, RIGHT };
+enum ArmsPositions{ ARMLEFT, ARMRIGHT };
 
 class Arms {
     private:
         Servo leftArm, rightArm;
-        Stances currentStance;
     public:
         Arms();
         /**
@@ -31,7 +30,14 @@ class Arms {
          * @param speed A double value used for the percentage of speed we want to use for the action. It
          * should be bounded to [0,1] with 1 being the maximum stable speed for the intended action.
          */
-        void punch(double speed);
+        void punch();
+
+	/*
+	 * @brief Bring back the default arms position after punching for a while
+	 *
+	 * no params
+	 */
+	void bringBack();
 
         /**
          * @brief Wrapper method for Servo.write
@@ -45,7 +51,7 @@ class Arms {
          * @param p The side we want to write
          * @param deg The degree we want to write
          */
-        void write(Positions p, int deg);
+        void write(ArmsPositions p, int deg);
 };
 
 

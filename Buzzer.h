@@ -1,7 +1,8 @@
+#include "UnorderedMap.h" 
+
 #ifndef BUZZER_H_
 #define BUZZER_H_
 
-#include <unordered_map>
 
 /**
  * @brief Note enumeration
@@ -34,6 +35,24 @@ Fusa,
 Semifusa
 };
 
+
+// Especialización para Notes
+template<>
+struct KeyHash<Notes> {
+    size_t operator()(const Notes& note) const {
+        return static_cast<size_t>(note);
+    }
+};
+
+// Especialización para Lengths
+template<>
+struct KeyHash<Lengths> {
+    size_t operator()(const Lengths& length) const {
+        return static_cast<size_t>(length);
+    }
+};
+
+
 /**
  * @brief Class for easier handling of the buzzer
  *
@@ -45,7 +64,6 @@ class Buzzer{
     private:
         int buzzerPin;
         int tempo;
-        Buzzer();
         /**
          * @brief Translates the note to its freq value
          *
@@ -55,7 +73,7 @@ class Buzzer{
         /**
          * @brief Map from notes to int values
          */
-        static const std::unordered_map<Notes, int> noteFrequencies;
+        static const UnorderedMap<Notes, int, KeyHash<Notes>> noteFrequencies;
         /**
          * @brief Translates the length figures to their duration according to the tempo
          *
@@ -65,9 +83,10 @@ class Buzzer{
         /**
          * @brief Map for length durations
          */
-        static const std::unordered_map<Lengths, double> lengthDurations;
+        static const UnorderedMap<Lengths, double, KeyHash<Lengths>> lengthDurations;
 
     public:
+        Buzzer();
         /**
          * @brief Initializer
          *

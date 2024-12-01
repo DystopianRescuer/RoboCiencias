@@ -1,8 +1,12 @@
-#ifndef LEGS_H_
-#define LEGS_H_
-
 #include <Servo.h>
-#include  "Buzzer.cpp"
+#include "Legs.h"
+#include "Arms.h"
+#include "Buzzer.h"
+
+
+#ifndef DANCER_H_
+#define DANCER_H_
+
 
 /**
  * @brief Class used to bring together the arms and legs reference to use em'
@@ -10,7 +14,7 @@
  *
  **/
 
-enum Dance { BebecitaBebelin, AguaPapa }
+enum Dance { BebecitaBebelin, AguaPapa };
 
 class Dancer {
     private:
@@ -23,7 +27,7 @@ class Dancer {
 	void attach(Legs legs, Arms arms, Buzzer buzzer);
 
 	void dance(Dance dance);
-}
+};
 
 
-#endif LEGS_H_
+#endif DANCER_H_

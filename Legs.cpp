@@ -25,17 +25,17 @@ int static const NORMALANGLE = 50;
 int static const walkingStepSize = 35;
 int static const rotatingStepSize = 35;
 
-Legs::Legs(){
+Legs::Legs() {
 }
 
-void Legs::write(Positions p, int deg){
+void Legs::write(LegsPositions p, int deg){
     if(deg > 180){
         return;
     }
     switch (p){
-        case LEFT: leftLeg.write(180-deg); break;
-        case RIGHT: rightLeg.write(deg); break;
-        case CENTER:
+        case LEGLEFT: leftLeg.write(180-deg); break;
+        case LEGRIGHT: rightLeg.write(deg); break;
+        case LEGCENTER:
             //Following the hack used for not setting up a center leg
             if(&centerLeg != &rightLeg)
                 centerLeg.write(deg);
@@ -43,11 +43,11 @@ void Legs::write(Positions p, int deg){
     }
 }
 
-int Legs::read(Positions p){
+int Legs::read(LegsPositions p){
     switch(p){
-        case LEFT: return 180-leftLeg.read();
-        case RIGHT: return rightLeg.read();
-        case CENTER:
+        case LEGLEFT: return 180-leftLeg.read();
+        case LEGRIGHT: return rightLeg.read();
+        case LEGCENTER:
             if(&centerLeg != &rightLeg)
                 return centerLeg.read();
     }
@@ -61,18 +61,19 @@ void Legs::stance(Stances stance){
 void Legs::stance(){
     switch (this->currentStance){
         case NORMAL:
-            this->write(LEFT, NORMALANGLE);
-            this->write(RIGHT, NORMALANGLE);
-            this->write(CENTER, NORMALANGLE);
+            this->write(LEGLEFT, NORMALANGLE);
+            this->write(LEGRIGHT, NORMALANGLE);
+            this->write(LEGCENTER, NORMALANGLE);
             break;
         case ATTACK:
-            this->write(LEFT, ATTACKANGLE);
-            this->write(RIGHT, ATTACKANGLE);
-            this->write(CENTER, ATTACKANGLE);
+            this->write(LEGLEFT, ATTACKANGLE);
+            this->write(LEGRIGHT, ATTACKANGLE);
+            this->write(LEGCENTER, ATTACKANGLE);
             break;
     }
 }
-void Legs::attach(int lLeg, int rLeg){
+
+void Legs::attach(int lLeg, int rLeg) {
    leftLeg.attach(lLeg);
    rightLeg.attach(rLeg);
    // Hack for avoiding setting up a center leg in two legged mode
@@ -80,13 +81,14 @@ void Legs::attach(int lLeg, int rLeg){
    this->stance(NORMAL);
 }
 
-void Legs::attach(int lLeg, int rLeg, int cLeg){
+void Legs::attach(int lLeg, int rLeg, int cLeg) {
    leftLeg.attach(lLeg);
    rightLeg.attach(rLeg);
    centerLeg.attach(cLeg);
    this->stance(NORMAL);
 }
-void Legs::walk(double speed){
+
+void Legs::walk(double speed) {
     if(speed > 1) return;
 
     //initial position
@@ -94,44 +96,44 @@ void Legs::walk(double speed){
 
     delay(MAXWALKINGSPEED / speed);
     //action
-    this->write(LEFT, leftLeg.read() - walkingStepSize);
+    this->write(LEGLEFT, leftLeg.read() - walkingStepSize);
     delay(MAXWALKINGSPEED / speed);
-    this->write(LEFT, leftLeg.read() - walkingStepSize);
-    this->write(RIGHT, rightLeg.read() + walkingStepSize);
+    this->write(LEGLEFT, leftLeg.read() - walkingStepSize);
+    this->write(LEGRIGHT, rightLeg.read() + walkingStepSize);
     delay(MAXWALKINGSPEED / speed);
-    this->write(RIGHT, rightLeg.read() + walkingStepSize);
+    this->write(LEGRIGHT, rightLeg.read() + walkingStepSize);
 }
 
-void Legs::rotateLeft(double speed){
+void Legs::rotateLeft(double speed) {
     if(speed > 1) return;
     //initial position
     this->stance();
     delay(MAXROTATINGSPEED / speed);
-    this->write(RIGHT, this->read(RIGHT) + rotatingStepSize);
+    this->write(LEGRIGHT, this->read(LEGRIGHT) + rotatingStepSize);
     delay(MAXROTATINGSPEED / speed);
-    this->write(RIGHT, this->read(RIGHT) - rotatingStepSize);
+    this->write(LEGRIGHT, this->read(LEGRIGHT) - rotatingStepSize);
 }
 
-void Legs::rotateRight(double speed){
+void Legs::rotateRight(double speed) {
     if(speed > 1) return;
     //initial position
     this->stance();
     delay(MAXROTATINGSPEED / speed);
-    this->write(LEFT, this->read(LEFT) + rotatingStepSize);
+    this->write(LEGLEFT, this->read(LEGLEFT) + rotatingStepSize);
     delay(MAXROTATINGSPEED / speed);
-    this->write(LEFT, this->read(LEFT) - rotatingStepSize);
+    this->write(LEGLEFT, this->read(LEGLEFT) - rotatingStepSize);
 }
 
-void Legs::walkBackwards(double speed){
+void Legs::walkBackwards(double speed) {
     if(speed > 1) return;
     //initial position
     this->stance();
     delay(MAXWALKINGSPEED / speed);
     //action
-    this->write(LEFT, leftLeg.read() - walkingStepSize);
+    this->write(LEGLEFT, leftLeg.read() - walkingStepSize);
     delay(MAXWALKINGSPEED / speed);
-    this->write(LEFT, leftLeg.read() + walkingStepSize);
-    this->write(RIGHT, rightLeg.read() - walkingStepSize);
+    this->write(LEGLEFT, leftLeg.read() + walkingStepSize);
+    this->write(LEGRIGHT, rightLeg.read() - walkingStepSize);
     delay(MAXWALKINGSPEED / speed);
-    this->write(RIGHT, rightLeg.read() + walkingStepSize);
+    this->write(LEGRIGHT, rightLeg.read() + walkingStepSize);
 }

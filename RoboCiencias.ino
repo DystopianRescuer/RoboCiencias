@@ -1,6 +1,9 @@
 #include <Servo.h>
 #include "UltrasonicSensor.h"
 #include "Legs.h"
+#include "Arms.h"
+#include "Buzzer.h"
+#include "Dancer.h"
 
 //Indicaciones de pines
 const int trigger = 7;
@@ -19,8 +22,8 @@ Legs legs;
 Arms arms;
 
 // Dancer is basically where all dancing logic lives
-Dancer dancer;
-Buzzer buzzer;
+//Buzzer buzzer;
+//Dancer dancer;
 
 // Representacion simbolica de sensor/es sonico/s
 UltraSonicSensor sensor;
@@ -36,8 +39,8 @@ void setup() {
   //Configuraciones iniciales
   sensor.initialize(trigger, echo);
   legs.attach(pinLeftLeg, pinRightLeg);
-  buzzer.attach(buzzerPin);
-  dancer.attach(legs, arms, buzzer);
+  //buzzer.attach(buzzerPin, 97);
+  //dancer.attach(legs, arms, buzzer);
 
   // for debugging
   Serial.begin(9600);
