@@ -34,18 +34,24 @@ void Arms::punch() {
    if(!attached) {
       return;
    }
-
+   // Just a placeholder
+   int delayTime = 100;
    // Punch routine
    // First: Set the LEFT arm
    this->write(ARMLEFT, MINPUNCHANGLE);
+   delay(delayTime);
    // Second: Punch with that arm
    this->write(ARMLEFT, MAXPUNCHANGLE);
+   delay(delayTime);
    // Return it to Min angle
    this->write(ARMLEFT, MINPUNCHANGLE);
+   delay(delayTime);
    // Third: Set the RIGHT arm
    this->write(ARMRIGHT, MINPUNCHANGLE);
    // Fourth: Punch with that arm
+   delay(delayTime);
    this->write(ARMRIGHT, MAXPUNCHANGLE);
+   delay(delayTime);
 }
 
 

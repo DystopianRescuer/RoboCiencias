@@ -92,9 +92,8 @@ Buzzer::Buzzer(){
 }
 
 
-
 int Buzzer::getNoteFrequency(Notes note){
-	return noteFrequencies.getValue(note);
+	return Buzzer::noteFrequencies.getValue(note);
 }
 
 

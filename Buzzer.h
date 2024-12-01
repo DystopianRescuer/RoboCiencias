@@ -3,7 +3,6 @@
 #ifndef BUZZER_H_
 #define BUZZER_H_
 
-
 /**
  * @brief Note enumeration
  *
@@ -64,26 +63,6 @@ class Buzzer{
     private:
         int buzzerPin;
         int tempo;
-        /**
-         * @brief Translates the note to its freq value
-         *
-         * @param note the note
-         */
-        static int getNoteFrequency(Notes note);
-        /**
-         * @brief Map from notes to int values
-         */
-        static const UnorderedMap<Notes, int, KeyHash<Notes>> noteFrequencies;
-        /**
-         * @brief Translates the length figures to their duration according to the tempo
-         *
-         * @param length the musical figure
-         */
-        int getLength(Lengths length);
-        /**
-         * @brief Map for length durations
-         */
-        static const UnorderedMap<Lengths, double, KeyHash<Lengths>> lengthDurations;
 
     public:
         Buzzer();
@@ -101,6 +80,27 @@ class Buzzer{
          * @param length Length of the note
          *
          */
+
+        /**
+         * @brief Translates the note to its freq value
+         *
+         * @param note the note
+         */
+        int getNoteFrequency(Notes note);
+        /**
+         * @brief Map from notes to int values
+         */
+        UnorderedMap<Notes, int, KeyHash<Notes>> noteFrequencies;
+        /**
+         * @brief Translates the length figures to their duration according to the tempo
+         *
+         * @param length the musical figure
+         */
+        int getLength(Lengths length);
+        /**
+         * @brief Map for length durations
+         */
+        UnorderedMap<Lengths, double, KeyHash<Lengths>> lengthDurations;
         void note(Notes note, Lengths length);
         void setTempo(int tempo);
         int getTempo();
