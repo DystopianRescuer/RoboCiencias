@@ -15,7 +15,7 @@ C_, Cs_, D_, Ds_, E_, F_, Fs_, G_, Gs_, A_, As_, B_,
 C, Cs, D, Ds, E, F, Fs, G, Gs, A, As, B,
 C2, Cs2, D2, Ds2, E2, F2, Fs2, G2, Gs2, A_2, As2, B2,
 C3, Cs3, D3, Ds3, E3, F3, Fs3, G3, Gs3, A_3, As3, B3,
-C4, Cs4, D4, Ds4, E4, F4, Fs4, G4, Gs4, A_4, As4, B4
+C4, Cs4, D4, Ds4, E4, F4, Fs4, G4, Gs4, A_4, As4, B4, Sil
 };
 /**
  * @brief Lengths enumeration
@@ -31,7 +31,8 @@ Redonda,
 Corchea,
 Semicorchea,
 Fusa,
-Semifusa
+Semifusa,
+CorcheaPlusSemi
 };
 
 
