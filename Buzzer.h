@@ -31,7 +31,8 @@ Redonda,
 Corchea,
 Semicorchea,
 Fusa,
-Semifusa
+Semifusa,
+CorcheaPlusSemi
 };
 
 
