@@ -90,7 +90,7 @@ Buzzer::Buzzer(){
 	lengthDurations.put(Lengths::Negra, 2.0);
 	lengthDurations.put(Lengths::Blanca, 4.0);
 	lengthDurations.put(Lengths::Redonda, 8.0);
-	lengthDurations.put(Lengths::CorcheaPlusSemi, 1.5)
+	lengthDurations.put(Lengths::CorcheaPlusSemi, 1.5);
 }
 
 
