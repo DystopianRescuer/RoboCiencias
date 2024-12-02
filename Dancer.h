@@ -14,13 +14,16 @@
  *
  **/
 
-enum Dance { BebecitaBebelin, AguaPapa };
+enum Dance { BEBECITABEBELIN, AGUAPAPA, MEPORTOBONITO };
 
 class Dancer {
     private:
 	Legs legs;
 	Arms arms;
 	Buzzer buzzer;
+    void BebecitaBebelin();
+    void AguaPapa();
+    void MePortoBonito();
     public:
 	Dancer();
 
