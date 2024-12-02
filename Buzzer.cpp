@@ -80,6 +80,7 @@ Buzzer::Buzzer(){
 	noteFrequencies.put(Notes::A_4, 880*4);
 	noteFrequencies.put(Notes::As4, 933*4);
 	noteFrequencies.put(Notes::B4, 988*4);
+	noteFrequencies.put(Notes::Sil, 10);
 
 
 	lengthDurations.put(Lengths::Semifusa, 1.0/8);
