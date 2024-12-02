@@ -12,8 +12,7 @@ const int pinRightLeg = 2;
 const int pinLeftLeg = 3;
 const int pinRightArm = 4;
 const int pinLeftArm = 5;
-// TBD
-const int buzzerPin = 8;
+const int buzzerPin = 13;
 
 // Representaciones simbolicas de Servos
 Legs legs;
