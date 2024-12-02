@@ -16,7 +16,7 @@ double static const MAXBACKWALKINGSPEED = 100;
  * CALIBRATED
  */
 int static const ATTACKANGLE = 5;
-int static const NORMALANGLE = 50;
+int static const NORMALANGLE = 128;
 
 /**
  * Standard "step" values for macro actions. This is the size in degrees that'll be taken in each macro action for servo movements.
