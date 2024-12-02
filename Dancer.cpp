@@ -5,6 +5,7 @@ void Dancer::BebecitaBebelin(){
 
 }
 void Dancer::MePortoBonito(){
+  buzzer.setTempo(92);
   buzzer.note(E2,Corchea);
   buzzer.note(E2,Corchea);
   buzzer.note(E2,Corchea);
