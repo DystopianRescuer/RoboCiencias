@@ -112,6 +112,7 @@ void Buzzer::attach(int buzzerPin, int tempo){
 
 void Buzzer::setTempo(int tempo){
 	if(tempo < 0) return;
+	this->tempo = tempo;
 }
 
 int Buzzer::getTempo(){
