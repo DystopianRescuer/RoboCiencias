@@ -33,4 +33,4 @@ class Dancer {
 };
 
 
-#endif DANCER_H_
+#endif // DANCER_H_
