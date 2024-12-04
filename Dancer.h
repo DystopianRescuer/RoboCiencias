@@ -18,16 +18,16 @@ enum Dance { BEBECITABEBELIN, AGUAPAPA, MEPORTOBONITO };
 
 class Dancer {
     private:
-        Legs legs;
-        Arms arms;
-        Buzzer buzzer;
+        Legs* legs;
+        Arms* arms;
+        Buzzer* buzzer;
         void BebecitaBebelin();
         void AguaPapa();
         void MePortoBonito();
     public:
         Dancer();
 
-        void attach(Legs legs, Arms arms, Buzzer buzzer);
+        void attach(Legs& legs, Arms& arms, Buzzer& buzzer);
 
         void dance(Dance dance){
             switch(dance){
