@@ -5,6 +5,8 @@
 #include "Buzzer.h"
 #include "Dancer.h"
 
+#define functionMode dev
+
 //Indicaciones de pines
 const int trigger = 7;
 const int echo = 6;
@@ -53,6 +55,18 @@ void setup() {
 void loop() {
     legs.walk(0.5);
     arms.punch();
+}
+
+
+void dev() {
+}
+
+
+void autonomous() {
+}
+
+
+void remote() {
 }
 
 
