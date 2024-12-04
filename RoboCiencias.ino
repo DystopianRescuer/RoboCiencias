@@ -15,6 +15,7 @@ const int pinLeftLeg = 4;
 const int pinRightArm = 3;
 const int pinLeftArm = 6;
 const int buzzerPin = 13;
+const int bluethoothPin = 11;
 
 // Representaciones simbolicas de Servos
 Legs legs;
@@ -33,7 +34,7 @@ long duration;
 int distance;
 
 // State for bluethoth controller
-int state = 'z';
+static int state = 'z';
 
 //Robot mode selection
 enum Modes{ DEV,AUTONOMOUS,REMOTE };
@@ -53,8 +54,7 @@ void setup() {
 
 
 void loop() {
-    legs.walk(0.5);
-    arms.punch();
+    functionMode();
 }
 
 
@@ -67,20 +67,45 @@ void autonomous() {
 
 
 void remote() {
+   if(Serial.available()) {
+       state = Serial.read();
+   }
+   remoteAction();
 }
 
 
 /*
  * Does action received by the bluethoth controller
 */
-void remoteAction(int signal) {
-
-    // Caminar hacia adelante
-    // Caminar hacia atras
-    // Girar hacia la izquierda
-    // Girar hacia la derecha
-    // Golpear
-    // Baile 1
-    // Baile 2
-    // Baile 3
+void remoteAction() {
+    switch(state) {
+        // Caminar hacia adelante
+        case 'a':
+	    legs.walk(0.5);
+	    break;
+        // Caminar hacia atras
+	case 'b':
+	    legs.walkBackwards(0.5);
+	    break;
+        // Girar hacia la izquierda
+	case 'c':
+	    legs.rotateLeft(0.5);
+	    break;
+        // Girar hacia la derecha
+	case 'd':
+	    legs.rotateRight(0.5);
+	    break;
+        // Golpear
+	case 'e':
+	    arms.punch();
+	    break;
+	case 'f':
+	    dancer.dance(MEPORTOBONITO);
+	    break;
+	case 'g':
+	    break;
+	case 'h':
+	    break;
+    }
+    state = '\0';
 }
