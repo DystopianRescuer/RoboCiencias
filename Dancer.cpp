@@ -109,17 +109,3 @@ void Dancer::attach(Legs legs, Arms arms, Buzzer buzzer){
     this->arms = arms;
     this->buzzer = buzzer;
 }
-
-void Dancer::dance(Dance dance){
-    switch(dance){
-        case MEPORTOBONITO:
-           this->MePortoBonito();
-           break;
-        case AGUAPAPA:
-            this->AguaPapa();
-            break;
-        case BEBECITABEBELIN:
-            this->BebecitaBebelin();
-            break;
-    }
-}
