@@ -106,11 +106,13 @@ int Buzzer::getLength(Lengths length) {
 
 void Buzzer::attach(int buzzerPin, int tempo){
 	this->buzzerPin = buzzerPin;
+	pinMode(buzzerPin, OUTPUT);
 	this->setTempo(tempo);
 }
 
 void Buzzer::setTempo(int tempo){
 	if(tempo < 0) return;
+	this->tempo = tempo;
 }
 
 int Buzzer::getTempo(){

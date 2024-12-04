@@ -8,10 +8,10 @@
 //Indicaciones de pines
 const int trigger = 7;
 const int echo = 6;
-const int pinRightLeg = 2;
-const int pinLeftLeg = 3;
-const int pinRightArm = 4;
-const int pinLeftArm = 5;
+const int pinRightLeg = 4;
+const int pinLeftLeg = 5;
+const int pinRightArm = 2;
+const int pinLeftArm = 3;
 const int buzzerPin = 13;
 
 // Representaciones simbolicas de Servos

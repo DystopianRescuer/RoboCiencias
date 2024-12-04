@@ -18,19 +18,32 @@ enum Dance { BEBECITABEBELIN, AGUAPAPA, MEPORTOBONITO };
 
 class Dancer {
     private:
-	Legs legs;
-	Arms arms;
-	Buzzer buzzer;
-    void BebecitaBebelin();
-    void AguaPapa();
-    void MePortoBonito();
+        Legs* legs;
+        Arms* arms;
+        Buzzer* buzzer;
+        void BebecitaBebelin();
+        void AguaPapa();
+        void MePortoBonito();
     public:
-	Dancer();
+        Dancer();
 
-	void attach(Legs legs, Arms arms, Buzzer buzzer);
+        void attach(Legs& legs, Arms& arms, Buzzer& buzzer);
 
-	void dance(Dance dance);
+        void dance(Dance dance){
+            switch(dance){
+                case MEPORTOBONITO:
+                    this->MePortoBonito();
+                    break;
+                case AGUAPAPA:
+                    this->AguaPapa();
+                    break;
+                case BEBECITABEBELIN:
+                    this->BebecitaBebelin();
+                    break;
+            }
+
+        }
 };
 
 
-#endif DANCER_H_
+#endif // DANCER_H_
