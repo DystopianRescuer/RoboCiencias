@@ -8,10 +8,10 @@
 //Indicaciones de pines
 const int trigger = 7;
 const int echo = 6;
-const int pinRightLeg = 4;
-const int pinLeftLeg = 5;
-const int pinRightArm = 2;
-const int pinLeftArm = 3;
+const int pinRightLeg = 5;
+const int pinLeftLeg = 4;
+const int pinRightArm = 3;
+const int pinLeftArm = 6;
 const int buzzerPin = 13;
 
 // Representaciones simbolicas de Servos
@@ -41,6 +41,7 @@ void setup() {
   //Configuraciones iniciales
   sensor.initialize(trigger, echo);
   legs.attach(pinLeftLeg, pinRightLeg);
+  arms.attach(pinLeftArm, pinRightArm);
   buzzer.attach(buzzerPin, 97);
   dancer.attach(legs, arms, buzzer);
 
@@ -48,42 +49,12 @@ void setup() {
   Serial.begin(9600);
 }
 
+
 void loop() {
-  switch(currentMode) {
-      //For development
-      case DEV:
-          // Legs development
-          legs.rotateRight(0.25);
-
-	  // Ultrasonic sensors dev
-	  //distance = sensor1.measureDistance();
-  	  ////////////////////////////////
-	  //Serial.print("Distancia: "); //
-	  //Serial.print(distance);      //
-	  //Serial.print("cm");          //
- 	  //Serial.println();            //
-  	  //////////////////////////////////
-
-  	  //Acciones
-	  //if(distance == 0){
-
- 	  //} else {
-
-  	  //}
-      break;
-      //For autonomous mode. We need a fancy algorithm
-      case AUTONOMOUS:
-          break;
-      //Remote mode, establish connections with bluetooth master
-      case REMOTE:
-      	  // Checks for updates on Serial
-          if (Serial.available() > 0) {
-	  	state = Serial.read();
-	  }
-	  remoteAction(state);
-          break;
-  }
+    legs.walk(0.5);
+    arms.punch();
 }
+
 
 /*
  * Does action received by the bluethoth controller
@@ -91,42 +62,11 @@ void loop() {
 void remoteAction(int signal) {
 
     // Caminar hacia adelante
-    if(signal == 'a') {
-        
-    }
-    
     // Caminar hacia atras
-    if(signal == 'b') {
-        
-    }
-
     // Girar hacia la izquierda
-    if(signal == 'c') {
-
-    }
-
     // Girar hacia la derecha
-    if(signal == 'd') {
-       
-    }
-
     // Golpear
-    if(signal == 'e') {
-        
-    }
-
     // Baile 1
-    if(signal == 'f') {
-     
-    }
-
     // Baile 2
-    if(signal == 'g') {
-     
-    }
-
     // Baile 3
-    if(signal == 'h') {
-     
-    }
 }

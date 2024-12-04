@@ -21,6 +21,7 @@ class Dancer {
         Legs* legs;
         Arms* arms;
         Buzzer* buzzer;
+
         void BebecitaBebelin();
         void AguaPapa();
         void MePortoBonito();
