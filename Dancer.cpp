@@ -230,47 +230,47 @@ void Dancer::AguaPapa(){
  this->legs->write(LEGLEFT, this->legs->read(LEGLEFT) - 45);
   this->legs->write(LEGRIGHT, this->legs->read(LEGRIGHT) + 45);
 
- this->buzzer->note(G7 , Corchea);
+ this->buzzer->note(G5 , Corchea);
   this->buzzer->note(Sil, Semicorchea);
  this->legs->write(LEGLEFT, this->legs->read(LEGLEFT) + 45);
   this->legs->write(LEGRIGHT, this->legs->read(LEGRIGHT) - 45);
 
- this->buzzer->note(E7 , Corchea);
+ this->buzzer->note(E5 , Corchea);
   this->buzzer->note(Sil, Semicorchea);
-  this->buzzer->note(E7 , Corchea);
+  this->buzzer->note(E5 , Corchea);
  this->legs->write(LEGLEFT, this->legs->read(LEGLEFT) - 45);
   this->legs->write(LEGRIGHT, this->legs->read(LEGRIGHT) + 45);
 
- this->buzzer->note(A_7 , Corchea);
+ this->buzzer->note(A_5 , Corchea);
   this->buzzer->note(Sil, Semicorchea);
  this->legs->write(LEGLEFT, this->legs->read(LEGLEFT) + 45);
   this->legs->write(LEGRIGHT, this->legs->read(LEGRIGHT) - 45);
 
- this->buzzer->note(E7 , Corchea);
+ this->buzzer->note(E5 , Corchea);
   this->buzzer->note(Sil, Semicorchea);
-  this->buzzer->note(E7 , Corchea);
+  this->buzzer->note(E5 , Corchea);
  this->legs->write(LEGLEFT, this->legs->read(LEGLEFT) - 45);
   this->legs->write(LEGRIGHT, this->legs->read(LEGRIGHT) + 45);
 
- this->buzzer->note(B7 , Corchea);
+ this->buzzer->note(B5 , Corchea);
   this->buzzer->note(Sil, Semicorchea);
  this->legs->write(LEGLEFT, this->legs->read(LEGLEFT) + 45);
   this->legs->write(LEGRIGHT, this->legs->read(LEGRIGHT) - 45);
 
- this->buzzer->note(F7 , Corchea);
+ this->buzzer->note(F5 , Corchea);
   this->buzzer->note(Sil, Semicorchea);
-  this->buzzer->note(F7 , Corchea);
+  this->buzzer->note(F5 , Corchea);
  this->legs->write(LEGLEFT, this->legs->read(LEGLEFT) - 45);
   this->legs->write(LEGRIGHT, this->legs->read(LEGRIGHT) + 45);
 
- this->buzzer->note(C8 , Corchea);
+ this->buzzer->note(C6 , Corchea);
   this->buzzer->note(Sil, Semicorchea);
  this->legs->write(LEGLEFT, this->legs->read(LEGLEFT) + 45);
   this->legs->write(LEGRIGHT, this->legs->read(LEGRIGHT) - 45);
   this->arms->write(ARMLEFT, 180);
   this->arms->write(ARMRIGHT, 180);
 
- this->buzzer->note(B7 , Corchea);
+ this->buzzer->note(B5 , Corchea);
  this->legs->write(LEGLEFT, this->legs->read(LEGLEFT) - 45);
   this->legs->write(LEGRIGHT, this->legs->read(LEGRIGHT) + 45);
   this->arms->write(ARMLEFT, 90);
@@ -282,7 +282,7 @@ void Dancer::AguaPapa(){
   this->arms->write(ARMLEFT, 180);
   this->arms->write(ARMRIGHT, 180);
 
- this->buzzer->note(A_7 , Corchea);
+ this->buzzer->note(A_5 , Corchea);
  this->legs->stance();
  this->arms->bringBack();
 
