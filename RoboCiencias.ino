@@ -109,6 +109,7 @@ void remoteAction() {
 	    dancer.dance(MEPORTOBONITO);
 	    break;
 	case 'g':
+      dancer.dance(AGUAPAPA);
 	    break;
 	case 'h':
 	    break;
