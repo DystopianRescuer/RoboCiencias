@@ -82,6 +82,33 @@ Buzzer::Buzzer(){
 	noteFrequencies.put(Notes::B4, 988*4);
 	noteFrequencies.put(Notes::Sil, 10);
 
+	noteFrequencies.put(Notes::C7, 261 * 32);
+	noteFrequencies.put(Notes::Cs7, 277 * 32);
+	noteFrequencies.put(Notes::D7, 293 * 32);
+	noteFrequencies.put(Notes::Ds7, 311 * 32);
+	noteFrequencies.put(Notes::E7, 329 * 32);
+	noteFrequencies.put(Notes::F7, 349 * 32);
+	noteFrequencies.put(Notes::Fs7, 369 * 32);
+	noteFrequencies.put(Notes::G7, 391 * 32);
+	noteFrequencies.put(Notes::Gs7, 415 * 32);
+	noteFrequencies.put(Notes::A_7, 440 * 32);
+	noteFrequencies.put(Notes::As7, 466 * 32);
+	noteFrequencies.put(Notes::C8, 261 * 64);
+	noteFrequencies.put(Notes::C5, 261 * 8);
+	noteFrequencies.put(Notes::Cs5, 277 * 8);
+	noteFrequencies.put(Notes::D5, 293 * 8);
+	noteFrequencies.put(Notes::Ds5, 311 * 8);
+	noteFrequencies.put(Notes::E5, 329 * 8);
+	noteFrequencies.put(Notes::F5, 349 * 8);
+	noteFrequencies.put(Notes::Fs5, 369 * 8);
+	noteFrequencies.put(Notes::G5, 391 * 8);
+	noteFrequencies.put(Notes::Gs5, 415 * 8);
+	noteFrequencies.put(Notes::A_5, 440 * 8);
+	noteFrequencies.put(Notes::As5, 466 * 8);
+	noteFrequencies.put(Notes::B5, 493 * 8);
+	noteFrequencies.put(Notes::C6, 261 * 16);
+
+
 
 	lengthDurations.put(Lengths::Semifusa, 1.0/8);
 	lengthDurations.put(Lengths::Fusa, 1.0/4);
