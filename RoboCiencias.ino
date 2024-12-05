@@ -4,8 +4,9 @@
 #include "Arms.h"
 #include "Buzzer.h"
 #include "Dancer.h"
+#include <SoftwareSerial.h>
 
-#define functionMode dev
+#define functionMode remote 
 
 //Indicaciones de pines
 const int trigger = 7;
@@ -15,7 +16,11 @@ const int pinLeftLeg = 4;
 const int pinRightArm = 3;
 const int pinLeftArm = 6;
 const int buzzerPin = 13;
-const int bluethoothPin = 11;
+const int bluetoothRX = 9;
+const int bluetoothTX = 10;
+
+// Serial for bluetooth
+SoftwareSerial bluetooth(bluetoothRX, bluetoothTX);
 
 // Representaciones simbolicas de Servos
 Legs legs;
@@ -34,11 +39,8 @@ long duration;
 int distance;
 
 // State for bluethoth controller
-static int state = 'z';
+int state = 'z';
 
-//Robot mode selection
-enum Modes{ DEV,AUTONOMOUS,REMOTE };
-const Modes currentMode = DEV;
 
 void setup() {
   //Configuraciones iniciales
@@ -50,6 +52,9 @@ void setup() {
 
   // for debugging
   Serial.begin(9600);
+
+  // For bluetooth
+  bluetooth.begin(9600);
 }
 
 
@@ -67,10 +72,11 @@ void autonomous() {
 
 
 void remote() {
-   if(Serial.available()) {
-       state = Serial.read();
+   if(bluetooth.available() > 0) {
+       state = bluetooth.read();
+       buzzer.note(F, Corchea);
+       remoteAction();
    }
-   remoteAction();
 }
 
 
@@ -107,5 +113,4 @@ void remoteAction() {
 	case 'h':
 	    break;
     }
-    state = '\0';
 }
