@@ -6,11 +6,11 @@
 #include "Dancer.h"
 #include <SoftwareSerial.h>
 
-#define functionMode remote 
+#define functionMode autonomous
 
 //Indicaciones de pines
 const int trigger = 7;
-const int echo = 6;
+const int echo = 8;
 const int pinRightLeg = 4;
 const int pinLeftLeg = 5;
 const int pinRightArm = 3;
@@ -72,6 +72,20 @@ void dev() {
 
 
 void autonomous() {
+    static int walks = 0;
+    int measureDist = sensor.measureDistance();
+    if(measureDist < 10) {
+        arms.punch();   
+	delay(200);
+    } else {
+	legs.walk(0.7);
+	if(walks++ == 10) {
+	    for(int i = 0; i < 5; i++) {
+	    legs.rotateLeft(0.7);
+	    walks -= 2;
+	    }
+	}
+    }
 }
 
 
