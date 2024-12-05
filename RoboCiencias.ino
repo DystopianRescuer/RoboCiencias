@@ -40,6 +40,7 @@ int distance;
 
 // State for bluethoth controller
 int state = 'z';
+int temp = 'z';
 
 //Speed for remote controlling
 double currentSpeed = 0.5;
@@ -76,6 +77,7 @@ void autonomous() {
 
 void remote() {
    if(bluetooth.available() > 0) {
+       temp = state;
        state = bluetooth.read();
        buzzer.note(F, Corchea);
    }
@@ -99,6 +101,7 @@ void remoteAction() {
         // Girar hacia la izquierda
 	case 'c':
 	    arms.punch();
+      delay(300/currentSpeed);
 	    break;
         // Girar hacia la derecha
 	case 'd':
@@ -117,13 +120,18 @@ void remoteAction() {
 	case 'h':
 	    break;
   case 'i':
+    state = temp;
     currentSpeed = 0.25;
     break;
   case 'j':
+    state = temp;
     currentSpeed = 0.5;
     break;
   case 'k':
+    state = temp;
     currentSpeed = 1;
     break;
+  case 'm':
+    legs.stance();
     }
 }
