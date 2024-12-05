@@ -35,7 +35,7 @@ void Arms::punch() {
       return;
    }
    // Just a placeholder
-   int delayTime = 400;
+   int delayTime = 300;
    // Punch routine
    this->write(ARMLEFT, MAXPUNCHANGLE);
    this->write(ARMRIGHT, MAXPUNCHANGLE);
