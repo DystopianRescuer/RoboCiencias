@@ -11,8 +11,8 @@
 //Indicaciones de pines
 const int trigger = 7;
 const int echo = 6;
-const int pinRightLeg = 5;
-const int pinLeftLeg = 4;
+const int pinRightLeg = 4;
+const int pinLeftLeg = 5;
 const int pinRightArm = 3;
 const int pinLeftArm = 6;
 const int buzzerPin = 13;
