@@ -11,8 +11,8 @@
 //Indicaciones de pines
 const int trigger = 7;
 const int echo = 6;
-const int pinRightLeg = 5;
-const int pinLeftLeg = 4;
+const int pinRightLeg = 4;
+const int pinLeftLeg = 5;
 const int pinRightArm = 3;
 const int pinLeftArm = 6;
 const int buzzerPin = 13;
@@ -91,11 +91,11 @@ void remoteAction() {
 	    break;
         // Caminar hacia atras
 	case 'b':
-	    legs.walkBackwards(0.5);
+	    legs.rotateLeft(0.5);
 	    break;
         // Girar hacia la izquierda
 	case 'c':
-	    legs.rotateLeft(0.5);
+	    arms.punch();
 	    break;
         // Girar hacia la derecha
 	case 'd':
@@ -103,7 +103,7 @@ void remoteAction() {
 	    break;
         // Golpear
 	case 'e':
-	    arms.punch();
+	    legs.walkBackwards(0.5);
 	    break;
 	case 'f':
 	    dancer.dance(MEPORTOBONITO);
