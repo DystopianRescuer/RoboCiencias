@@ -5,7 +5,8 @@ void Dancer::BebecitaBebelin(){
 
 }
 void Dancer::MePortoBonito(){
-  this->buzzer->setTempo(92);
+  this->buzzer->setTempo(50);
+  // Y en la calle ando suelto pero x ti me quito
   this->buzzer->note(E2,Corchea);
   this->buzzer->note(E2,Corchea);
   this->buzzer->note(E2,Corchea);
@@ -25,6 +26,7 @@ void Dancer::MePortoBonito(){
   this->buzzer->note(Sil,Semicorchea);
   this->buzzer->note(Sil,Corchea);
   this->buzzer->note(Sil,Corchea);
+  //Si tu me lo pides yo me porto bonito
   this->buzzer->note(Cs2,Corchea);
   this->buzzer->note(Cs2,Semicorchea);
   this->buzzer->note(Sil,Semicorchea);
@@ -43,6 +45,7 @@ void Dancer::MePortoBonito(){
   this->buzzer->note(Cs2,Semicorchea);
   this->buzzer->note(Sil,Semicorchea);
   this->buzzer->note(Sil,Corchea);
+  //Tu no eres bebesita, tu eres bebesota
   this->buzzer->note(Cs2,Negra);
   this->buzzer->note(Sil,Semicorchea);
   this->buzzer->note(Cs2,Semicorchea);
@@ -56,6 +59,7 @@ void Dancer::MePortoBonito(){
   this->buzzer->note(E2,Semicorchea);
   this->buzzer->note(Fs2,Semicorchea);
   this->buzzer->note(E2,Semicorchea);
+  //Frikitona ma se te nota
   this->buzzer->note(Ds2,Corchea);
   this->buzzer->note(Cs2,Negra);
   this->buzzer->note(E2,Semicorchea);
@@ -66,6 +70,7 @@ void Dancer::MePortoBonito(){
   this->buzzer->note(Gs,Corchea);
   this->buzzer->note(Fs2,Semicorchea);
   this->buzzer->note(E2,Semicorchea);
+  //Le gustan los trios cuando esta en la nota
   this->buzzer->note(Ds2,Corchea);
   this->buzzer->note(Cs2,Semicorchea);
   this->buzzer->note(Sil,Semicorchea);
@@ -79,6 +84,7 @@ void Dancer::MePortoBonito(){
   this->buzzer->note(A,Corchea);
   this->buzzer->note(Fs2,Semicorchea);
   this->buzzer->note(E2,Semicorchea);
+  //Si el novio no sirve de una lo bota
   this->buzzer->note(Ds2,Corchea);
   this->buzzer->note(Cs2,Semicorchea);
   this->buzzer->note(Sil,Semicorchea);
