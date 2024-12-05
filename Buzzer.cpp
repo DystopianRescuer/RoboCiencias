@@ -82,6 +82,20 @@ Buzzer::Buzzer(){
 	noteFrequencies.put(Notes::B4, 988*4);
 	noteFrequencies.put(Notes::Sil, 10);
 
+	noteFrequencies.put(Notes::C7, 261 * 32);
+	noteFrequencies.put(Notes::Cs7, 277 * 32);
+	noteFrequencies.put(Notes::D7, 293 * 32);
+	noteFrequencies.put(Notes::Ds7, 311 * 32);
+	noteFrequencies.put(Notes::E7, 329 * 32);
+	noteFrequencies.put(Notes::F7, 349 * 32);
+	noteFrequencies.put(Notes::Fs7, 369 * 32);
+	noteFrequencies.put(Notes::G7, 391 * 32);
+	noteFrequencies.put(Notes::Gs7, 415 * 32);
+	noteFrequencies.put(Notes::A7, 440 * 32);
+	noteFrequencies.put(Notes::As7, 466 * 32);
+	noteFrequencies.put(Notes::C8, 261 * 64);
+
+
 
 	lengthDurations.put(Lengths::Semifusa, 1.0/8);
 	lengthDurations.put(Lengths::Fusa, 1.0/4);
