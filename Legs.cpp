@@ -108,6 +108,8 @@ void Legs::walk(double speed) {
     delay(MAXWALKINGSPEED / speed);
     this->write(LEGLEFT, this->read(LEGRIGHT) + 10);
     this->write(LEGRIGHT, this->read(LEGRIGHT) - walkingStepSize);
+    delay(MAXWALKINGSPEED / speed);
+    this->stance();
 }
 
 void Legs::rotateLeft(double speed) {
