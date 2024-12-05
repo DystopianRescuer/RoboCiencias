@@ -91,11 +91,11 @@ void remoteAction() {
 	    break;
         // Caminar hacia atras
 	case 'b':
-	    legs.walkBackwards(0.5);
+	    legs.rotateLeft(0.5);
 	    break;
         // Girar hacia la izquierda
 	case 'c':
-	    legs.rotateLeft(0.5);
+	    arms.punch();
 	    break;
         // Girar hacia la derecha
 	case 'd':
@@ -103,7 +103,7 @@ void remoteAction() {
 	    break;
         // Golpear
 	case 'e':
-	    arms.punch();
+	    legs.walkBackwards(0.5);
 	    break;
 	case 'f':
 	    dancer.dance(MEPORTOBONITO);
