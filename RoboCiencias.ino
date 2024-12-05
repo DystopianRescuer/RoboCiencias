@@ -78,8 +78,8 @@ void remote() {
    if(bluetooth.available() > 0) {
        state = bluetooth.read();
        buzzer.note(F, Corchea);
-       remoteAction();
    }
+   remoteAction();
 }
 
 
