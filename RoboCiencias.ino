@@ -41,6 +41,9 @@ int distance;
 // State for bluethoth controller
 int state = 'z';
 
+//Speed for remote controlling
+double currentSpeed = 0.5;
+
 
 void setup() {
   //Configuraciones iniciales
@@ -87,11 +90,11 @@ void remoteAction() {
     switch(state) {
         // Caminar hacia adelante
         case 'a':
-	    legs.walk(0.5);
+	    legs.walk(currentSpeed);
 	    break;
         // Caminar hacia atras
 	case 'b':
-	    legs.rotateLeft(0.5);
+	    legs.rotateLeft(currentSpeed);
 	    break;
         // Girar hacia la izquierda
 	case 'c':
@@ -99,11 +102,11 @@ void remoteAction() {
 	    break;
         // Girar hacia la derecha
 	case 'd':
-	    legs.rotateRight(0.5);
+	    legs.rotateRight(currentSpeed);
 	    break;
         // Golpear
 	case 'e':
-	    legs.walkBackwards(0.5);
+	    legs.walkBackwards(currentSpeed);
 	    break;
 	case 'f':
 	    dancer.dance(MEPORTOBONITO);
@@ -113,5 +116,14 @@ void remoteAction() {
 	    break;
 	case 'h':
 	    break;
+  case 'i':
+    currentSpeed = 0.25;
+    break;
+  case 'j':
+    currentSpeed = 0.5;
+    break;
+  case 'k':
+    currentSpeed = 1;
+    break;
     }
 }
