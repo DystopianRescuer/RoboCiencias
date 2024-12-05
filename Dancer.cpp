@@ -226,6 +226,27 @@ this->legs->write(LEGLEFT, this->legs->read(LEGLEFT) - 45);
 
 }
 void Dancer::AguaPapa(){
+  this->buzzer->setTempo(40);
+  this->buzzer->note(G3 , Corchea);
+  this->buzzer->note(Sil, Semicorchea);
+  this->buzzer->note(E3 , Corchea);
+  this->buzzer->note(Sil, Semicorchea);
+  this->buzzer->note(E3 , Corchea);
+  this->buzzer->note(A_3 , Corchea);
+  this->buzzer->note(Sil, Semicorchea);
+  this->buzzer->note(E3 , Corchea);
+  this->buzzer->note(Sil, Semicorchea);
+  this->buzzer->note(E3 , Corchea);
+  this->buzzer->note(B3 , Corchea);
+  this->buzzer->note(Sil, Semicorchea);
+  this->buzzer->note(F3 , Corchea);
+  this->buzzer->note(Sil, Semicorchea);
+  this->buzzer->note(F3 , Corchea);
+  this->buzzer->note(C4 , Corchea);
+  this->buzzer->note(Sil, Semicorchea);
+  this->buzzer->note(B3 , Corchea);
+  this->buzzer->note(Sil, Semicorchea);
+  this->buzzer->note(A_3 , Corchea);
 
 }
 
